@@ -2,3 +2,8 @@ Flask
 bcrypt
 flask_wtf
 flask-csp
+flask-login
+werkzeug
+wtforms
+os
+email_validator

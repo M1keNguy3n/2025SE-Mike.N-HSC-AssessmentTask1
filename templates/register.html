@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Register</title>
+  </head>
+  <body>
+    <div
+      class="container d-flex align-items-center justify-content-center vh-100"
+    >
+      <form
+        class="border p-4 rounded shadow"
+        style="width: 400px"
+        method="POST"
+        action="/register"
+      >
+        <h2 class="text-center mb-4">Register</h2>
+
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">{{ message }}</div>
+        {% endfor %} {% endif %} {% endwith %}
+
+        <!-- CSRF token -->
+        {{ form.hidden_tag() }}
+        <!-- Email input -->
+        {{ form.email.label(class='form-label') }} {{
+        form.email(class='form-control') }}
+
+        <!-- Password input -->
+        {{ form.password.label(class='form-label') }} {{
+        form.password(class='form-control') }}
+
+        <!-- Confirm Password input -->
+        {{ form.confirm_password.label(class='form-label') }} {{
+        form.confirm_password(class='form-control') }}
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block">
+          Register
+        </button>
+
+        <p class="text-center mt-3">
+          Already have an account?
+          <a href="login.html">Log in here</a>
+        </p>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

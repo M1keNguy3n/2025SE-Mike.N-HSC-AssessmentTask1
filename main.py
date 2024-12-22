@@ -1,14 +1,15 @@
-from flask import Flask
-from flask import redirect
-from flask import render_template
-from flask import request
-from flask import jsonify
+from flask import Flask, redirect, render_template, request, jsonify, flash, url_for
+from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 import requests
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import DataRequired, Email, Length
+import os
 from flask_wtf import CSRFProtect
-from flask_csp.csp import csp_header
 import logging
-
 import userManagement as dbHandler
+from userManagement import User
 
 # Code snippet for logging a message
 # app.logger.critical("message")
@@ -21,10 +22,103 @@ logging.basicConfig(
     format="%(asctime)s %(message)s",
 )
 
-# Generate a unique basic 16 key: https://acte.ltd/utils/randomkeygen
+# Generate a 24 byte secret key
 app = Flask(__name__)
-app.secret_key = b"_53oi3uriq9pifpff;apl"
+app.config['SECRET_KEY'] = os.urandom(24)
 csrf = CSRFProtect(app)
+
+#apply_csp after every request
+@app.after_request
+def apply_csp(response):
+    response.headers['Content-Security-Policy'] = (
+        "base-uri 'self'; "
+        "default-src 'self'; "
+        "style-src 'self'; "
+        "script-src 'self'; "
+        "img-src 'self' data:; "
+        "media-src 'self'; "
+        "font-src 'self'; "
+        "object-src 'self'; "
+        "child-src 'self'; "
+        "connect-src 'self'; "
+        "worker-src 'self'; "
+        "report-uri /csp_report; "
+        "frame-ancestors 'none'; "
+        "form-action 'self'; "
+        "frame-src 'none';"
+        )
+    return response
+
+# login implementation
+users = {}
+login_manager = LoginManager()
+login_manager.init_app(app)
+
+class LoginForm(FlaskForm):
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    submit = SubmitField('Sign In')
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return dbHandler.get_user_by_id(user_id)
+
+
+#register implementation
+#Create a registration form using Flask-WTF
+class RegistrationForm(FlaskForm):
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    password = PasswordField('Password', validators=[DataRequired(), Length(min = 8, max = 20)])
+    confirm_password = PasswordField('Confirm Password', validators=[DataRequired()])
+    submit = SubmitField('Register')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        print(form.errors)
+        email = form.email.data.strip()
+        password = form.password.data.strip()
+        print('email and password received')
+        # Check if user exists and password is correct
+        user = dbHandler.get_users(email)
+        if user and check_password_hash(user.password, password):
+            login_user(user)
+            return redirect(url_for('index'))
+        
+        # Flash message if login fails
+        flash('Invalid email or password', 'danger')
+    return render_template('login.html', form=form)
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        email = form.email.data.strip()
+        password = form.password.data.strip()
+        confirm_password = form.confirm_password.data.strip()
+
+        # Check if the user already exists
+        if email in users:
+            flash('Email already registered. Please log in.', 'danger')
+            return redirect(url_for('login'))
+
+        # Check if passwords match
+        if password != confirm_password:
+            flash('Passwords do not match. Please try again.', 'danger')
+            return redirect(url_for('register'))
+
+        # Create a new user and store it in memory (for demonstration)
+        user = User(email, generate_password_hash(password))
+        dbHandler.insert_users(user.id, user.password)
+        flash('Registration successful! You can now log in.', 'success')
+        
+        # Redirect to the login page after successful registration
+        return redirect(url_for('login.html'))
+    
+    return render_template('register.html', form=form)
+
 
 
 # Redirect index.html to domain root for consistent UX
@@ -36,30 +130,11 @@ csrf = CSRFProtect(app)
 def root():
     return redirect("/", 302)
 
-
-@app.route("/", methods=["POST", "GET"])
-@csp_header(
-    {
-        # Server Side CSP is consistent with meta CSP in layout.html
-        "base-uri": "'self'",
-        "default-src": "'self'",
-        "style-src": "'self'",
-        "script-src": "'self'",
-        "img-src": "'self' data:",
-        "media-src": "'self'",
-        "font-src": "'self'",
-        "object-src": "'self'",
-        "child-src": "'self'",
-        "connect-src": "'self'",
-        "worker-src": "'self'",
-        "report-uri": "/csp_report",
-        "frame-ancestors": "'none'",
-        "form-action": "'self'",
-        "frame-src": "'none'",
-    }
-)
+@app.route("/index", methods=['GET'])
+@app.route("/", methods=["GET"])
 def index():
-    return render_template("/index.html")
+    print("i was here")
+    return render_template("/index.html", content= dbHandler.list_diaries_collapsed())
 
 
 @app.route("/privacy.html", methods=["GET"])
@@ -87,4 +162,7 @@ def csp_report():
 
 
 if __name__ == "__main__":
+    app.config['DEBUG'] = True
+    app.config['FLASK_DEBUG'] = 1
+    logging.getLogger('werkzeug').setLevel(logging.DEBUG)
     app.run(debug=True, host="0.0.0.0", port=5000)

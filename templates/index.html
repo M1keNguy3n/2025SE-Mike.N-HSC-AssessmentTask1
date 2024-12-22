@@ -1,11 +1,18 @@
-{% extends 'layout.html' %}
-{% block content %}
+{% extends 'layout.html' %} {% block content %}
 <div class="container">
-    <div class="row">
-        <h1 class="display-1">Hello world!</h1>
+  <div class="row">
+    {% for row in content %}
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Developer: {{ row[0] }}</h5>
+          <p class="card-text">Project: {{ row[1] }}</p>
+          <p class="card-text">Start Time: {{ row[2] }}</p>
+          <p class="card-text">End Time: {{ row[3] }}</p>
+        </div>
+      </div>
     </div>
-    <div class="row">
-
-    </div>
+    {% endfor %}
+  </div>
 </div>
 {% endblock %}
