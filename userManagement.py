@@ -6,10 +6,10 @@ class User(UserMixin):
         self.id = id
         self.password = password
 
-def list_diaries_collapsed():
+def list_diaries():
 	con = sql.connect(".databaseFiles/database.db")
 	cur = con.cursor()
-	data = cur.execute('SELECT developer, project, StartTime, Endtime FROM diaries').fetchall()
+	data = cur.execute('SELECT * FROM diaries').fetchall()
 	con.close()
 	return data
 
@@ -23,6 +23,8 @@ def insert_diaries(developer,
     con = sql.connect(".database/database.db")
     cur = con.cursor()
     cur.execute("INSERT INTO diaries (developer, project, StartTime, EndTime, RepoURL, DevNote, CodeSnippet) VALUES (?,?,?,?,?,?,?)", (developer, project, StartTime, EndTime, RepoURL, DevNote, CodeSnippet))
+    cur.execute("UPDATE diaries SET TimeWorked = ROUND((strftime('%s', EndTime) - strftime('%s', StartTime)) / 60.0 / 15);")
+    cur.execute("UPDATE diaries SET TimeWorked = printf('%d:%02d', (TimeWorked * 15) / 60, (TimeWorked * 15) % 60);")
     con.commit()
     con.close()
 

@@ -23,3 +23,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+function showOverlay(developer, note, code) {
+  // Populate the overlay with content
+  document.getElementById(
+    "overlayTitle"
+  ).textContent = `Developer: ${developer}`;
+  document.getElementById(
+    "overlayNote"
+  ).innerHTML = `<strong>Note:</strong> ${note}`;
+  document.getElementById(
+    "overlayCode"
+  ).innerHTML = `<strong>Code Snippet:</strong> <br>${code}`;
+
+  // Show the overlay
+  document.getElementById("diaryOverlay").style.display = "flex";
+}

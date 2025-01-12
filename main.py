@@ -77,15 +77,13 @@ class RegistrationForm(FlaskForm):
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        print(form.errors)
         email = form.email.data.strip()
         password = form.password.data.strip()
-        print('email and password received')
         # Check if user exists and password is correct
         user = dbHandler.get_users(email)
         if user and check_password_hash(user.password, password):
             login_user(user)
-            return redirect(url_for('index'))
+            return redirect(url_for('dashboard'))
         
         # Flash message if login fails
         flash('Invalid email or password', 'danger')
@@ -115,7 +113,7 @@ def register():
         flash('Registration successful! You can now log in.', 'success')
         
         # Redirect to the login page after successful registration
-        return redirect(url_for('login.html'))
+        return redirect(url_for('login'))
     
     return render_template('register.html', form=form)
 
@@ -133,9 +131,12 @@ def root():
 @app.route("/index", methods=['GET'])
 @app.route("/", methods=["GET"])
 def index():
-    print("i was here")
-    return render_template("/index.html", content= dbHandler.list_diaries_collapsed())
+    return render_template("/index.html", content= dbHandler.list_diaries())
 
+@app.route("/dashboard", methods=['GET'])
+@login_required
+def dashboard():
+    return render_template("/dashboard.html", content= dbHandler.list_diaries())
 
 @app.route("/privacy.html", methods=["GET"])
 def privacy():
