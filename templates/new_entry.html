@@ -1,0 +1,124 @@
+{% extends "layout.html" %} {% block content %}
+<title>New Diary Entry</title>
+<div class="container align-items-center justify-content-center">
+  <form
+    class="border p-4 rounded shadow d-flex flex-column justify-content-between"
+    method="POST"
+    action="/new_entry"
+  >
+    <h2 class="text-center mb-4">New Diary Entry</h2>
+    {{ form.hidden_tag() }} {% with messages =
+    get_flashed_messages(with_categories=true) %} {% if messages %}
+    <div class="alert-container">
+      {% for category, message in messages %}
+      <div
+        class="alert alert-{{ category }} alert-dismissible fade show"
+        role="alert"
+      >
+        {{ message }}
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %} {% endwith %}
+    <div class="mb-3">
+      {{ form.developer.label(class="form-label") }} {{
+      form.developer(class="form-control") }} {% for error in
+      form.developer.errors %}
+      <span class="invalid-feedback">[{{ error }}]</span>
+      {% endfor %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.project.label(class="form-label") }} {{
+      form.project(class="form-control") }} {% for error in form.project.errors
+      %}
+      <span class="invalid-feedback">[{{ error }}]</span>
+      {% endfor %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.start_time.label(class="form-label") }} {{
+      form.start_time(class="form-control") }} {% for error in
+      form.start_time.errors %}
+      <span class="invalid-feedback">[{{ error }}]</span>
+      {% endfor %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.end_time.label(class="form-label") }} {{
+      form.end_time(class="form-control") }} {% for error in
+      form.end_time.errors %}
+      <span class="invalid-feedback">[{{ error }}]</span>
+      {% endfor %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.repo_url.label(class="form-label") }} {{
+      form.repo_url(class="form-control") }} {% for error in
+      form.repo_url.errors %}
+      <span class="invalid-feedback">[{{ error }}]</span>
+      {% endfor %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.dev_note.label(class="form-label") }} {{
+      form.dev_note(class="form-control", rows=5) }} {% for error in
+      form.dev_note.errors %}
+      <span class="invalid-feedback">[{{ error }}]</span>
+      {% endfor %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.code_snippet.label(class="form-label") }} {{
+      form.code_snippet(class="form-control", rows=5) }} {% for error in
+      form.code_snippet.errors %}
+      <span class="invalid-feedback">[{{ error }}]</span>
+      {% endfor %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.language.label(class="form-label") }} {{
+      form.language(class="form-control") }} {% for error in
+      form.language.errors %}
+      <span class="invalid-feedback">[{{ error }}]</span>
+      {% endfor %}
+    </div>
+
+    <div class="text-center">
+      {{ form.submit(class="btn btn-primary w-100") }}
+    </div>
+  </form>
+</div>
+
+<script>
+  document.getElementById("diaryEntryForm").addEventListener(
+    "submit",
+    function (event) {
+      var form = this;
+      if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+        // Find the first invalid element
+        var firstInvalidElement = form.querySelector(":invalid");
+        if (firstInvalidElement) {
+          // Scroll to the first invalid element
+          firstInvalidElement.focus();
+          firstInvalidElement.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }
+      }
+      form.classList.add("was-validated");
+    },
+    false
+  );
+</script>
+
+{% endblock %}

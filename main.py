@@ -3,13 +3,14 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 import requests
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import DataRequired, Email, Length
+from wtforms import StringField, PasswordField, SubmitField, TextAreaField, DateTimeField, URLField, SelectField
+from wtforms.validators import DataRequired, Email, Length, URL
 import os
 from flask_wtf import CSRFProtect
 import logging
 import userManagement as dbHandler
 from userManagement import User
+from flask_cors import CORS
 
 # Code snippet for logging a message
 # app.logger.critical("message")
@@ -26,14 +27,19 @@ logging.basicConfig(
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.urandom(24)
 csrf = CSRFProtect(app)
+CORS(app, origins=[r'.*\.github\.dev'])
+
+@app.route('/static/manifest.json')
+def manifest():
+    return app.send_static_file('manifest.json')
 
 #apply_csp after every request
 @app.after_request
 def apply_csp(response):
     response.headers['Content-Security-Policy'] = (
-        "base-uri 'self'; "
-        "default-src 'self'; "
-        "style-src 'self'; "
+        "base-uri 'self' https://github.dev; "
+        "default-src 'self' https://github.dev;"
+        "style-src 'self' https://github.dev; "
         "script-src 'self'; "
         "img-src 'self' data:; "
         "media-src 'self'; "
@@ -73,6 +79,7 @@ class RegistrationForm(FlaskForm):
     confirm_password = PasswordField('Confirm Password', validators=[DataRequired()])
     submit = SubmitField('Register')
 
+@app.route("/", methods=["GET"])
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
@@ -118,6 +125,35 @@ def register():
     return render_template('register.html', form=form)
 
 
+#diary entry implementation
+class DiaryEntryForm(FlaskForm):
+    developer = StringField('Developer', validators=[DataRequired()])
+    project = StringField('Project', validators=[DataRequired()])
+    start_time = DateTimeField('Start Time', format='%Y-%m-%d %H:%M:%S', validators=[DataRequired()])
+    end_time = DateTimeField('End Time', format='%Y-%m-%d %H:%M:%S', validators=[DataRequired()])
+    repo_url = URLField('Repo URL', validators=[DataRequired(), URL()])
+    dev_note = TextAreaField('Developer Note', validators=[DataRequired()])
+    code_snippet = TextAreaField('Code Snippet', validators=[DataRequired()])
+    language = SelectField('Language', choices=[('HTML', 'HTML'), ('Python', 'Python'), ('JavaScript', 'JavaScript'), ('CSS', 'CSS')], validators=[DataRequired()])
+    submit = SubmitField('Submit')
+
+@app.route('/new_entry', methods=['GET', 'POST'])
+def new_entry():
+    form = DiaryEntryForm()
+    if form.validate_on_submit():
+        developer = form.developer.data
+        project = form.project.data
+        start_time = form.start_time.data.strftime('%Y-%m-%d %H:%M:%S')
+        end_time = form.end_time.data.strftime('%Y-%m-%d %H:%M:%S')
+        repo_url = form.repo_url.data
+        dev_note = form.dev_note.data
+        code_snippet = form.code_snippet.data
+        language = form.language.data
+        dbHandler.insert_diaries(developer, project, start_time, end_time, repo_url, dev_note, code_snippet, language)
+        
+        flash('Diary entry submitted successfully!', 'success')
+        return redirect(url_for('new_entry'))
+    return render_template('new_entry.html', form=form)
 
 # Redirect index.html to domain root for consistent UX
 @app.route("/index", methods=["GET"])
@@ -129,7 +165,7 @@ def root():
     return redirect("/", 302)
 
 @app.route("/index", methods=['GET'])
-@app.route("/", methods=["GET"])
+
 def index():
     return render_template("/index.html", content= dbHandler.list_diaries())
 
@@ -141,17 +177,6 @@ def dashboard():
 @app.route("/privacy.html", methods=["GET"])
 def privacy():
     return render_template("/privacy.html")
-
-
-# example CSRF protected form
-@app.route("/form.html", methods=["POST", "GET"])
-def form():
-    if request.method == "POST":
-        email = request.form["email"]
-        text = request.form["text"]
-        return render_template("/form.html")
-    else:
-        return render_template("/form.html")
 
 
 # Endpoint for logging CSP violations

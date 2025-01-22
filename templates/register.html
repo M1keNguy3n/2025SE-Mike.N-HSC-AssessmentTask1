@@ -1,11 +1,6 @@
 {% extends 'layout.html' %} {% block content %}
 <div class="container d-flex align-items-center justify-content-center vh-100">
-  <form
-    class="border p-4 rounded shadow"
-    style="width: 400px"
-    method="POST"
-    action="/register"
-  >
+  <form class="border p-4 rounded shadow" method="POST" action="/register">
     <h2 class="text-center mb-4">Register</h2>
 
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
