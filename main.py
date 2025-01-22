@@ -4,7 +4,7 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 import requests
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
+from wtforms import StringField, PasswordField, SubmitField, TextAreaField, DateTimeField, URLField, SelectField
 from wtforms.validators import DataRequired, Email, Length
 from flask_wtf import CSRFProtect
 import logging
@@ -73,6 +73,7 @@ class RegistrationForm(FlaskForm):
     confirm_password = PasswordField('Confirm Password', validators=[DataRequired()])
     submit = SubmitField('Register')
 
+@app.route("/", methods=["GET"])
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
@@ -117,7 +118,7 @@ def register():
     
     return render_template('register.html', form=form)
 
-
+# Diary entry implementation
 
 # Redirect index.html to domain root for consistent UX
 @app.route("/index", methods=["GET"])
@@ -129,7 +130,7 @@ def root():
     return redirect("/", 302)
 
 @app.route("/index", methods=['GET'])
-@app.route("/", methods=["GET"])
+
 def index():
     return render_template("/index.html", content= dbHandler.list_diaries())
 

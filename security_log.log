@@ -3183,3 +3183,377 @@
 2025-01-12 09:54:05,694 127.0.0.1 - - [12/Jan/2025 09:54:05] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
 2025-01-12 09:54:07,294 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/dashboard","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/login","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
 2025-01-12 09:54:07,294 127.0.0.1 - - [12/Jan/2025 09:54:07] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 01:48:46,962 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.1:5000
+2025-01-20 01:48:46,962 [33mPress CTRL+C to quit[0m
+2025-01-20 01:48:46,963  * Restarting with stat
+2025-01-20 01:48:47,226  * Debugger is active!
+2025-01-20 01:48:47,251  * Debugger PIN: 355-953-528
+2025-01-20 01:48:56,387 127.0.0.1 - - [20/Jan/2025 01:48:56] "GET / HTTP/1.1" 200 -
+2025-01-20 01:48:56,731 127.0.0.1 - - [20/Jan/2025 01:48:56] "GET /static/css/prism-okaidia.min.css HTTP/1.1" 200 -
+2025-01-20 01:48:56,734 127.0.0.1 - - [20/Jan/2025 01:48:56] "GET /static/js/prism.min.js HTTP/1.1" 200 -
+2025-01-20 01:48:56,745 127.0.0.1 - - [20/Jan/2025 01:48:56] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-01-20 01:48:56,800 127.0.0.1 - - [20/Jan/2025 01:48:56] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-01-20 01:48:57,237 127.0.0.1 - - [20/Jan/2025 01:48:57] "GET /static/js/prism-python.min.js HTTP/1.1" 200 -
+2025-01-20 01:48:57,305 127.0.0.1 - - [20/Jan/2025 01:48:57] "GET /static/js/prism-javascript.min.js HTTP/1.1" 200 -
+2025-01-20 01:48:57,376 127.0.0.1 - - [20/Jan/2025 01:48:57] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 01:48:57,448 127.0.0.1 - - [20/Jan/2025 01:48:57] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 01:48:57,512 127.0.0.1 - - [20/Jan/2025 01:48:57] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-01-20 01:48:57,763 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 01:48:57,763 127.0.0.1 - - [20/Jan/2025 01:48:57] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 01:48:59,490 127.0.0.1 - - [20/Jan/2025 01:48:59] "GET /login HTTP/1.1" 200 -
+2025-01-20 01:48:59,611 127.0.0.1 - - [20/Jan/2025 01:48:59] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 01:48:59,617 127.0.0.1 - - [20/Jan/2025 01:48:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 01:48:59,618 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/login","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"inline","line-number":81,"source-file":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/login","status-code":200,"script-sample":""}}
+2025-01-20 01:48:59,619 127.0.0.1 - - [20/Jan/2025 01:48:59] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 01:48:59,621 127.0.0.1 - - [20/Jan/2025 01:48:59] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 01:48:59,627 127.0.0.1 - - [20/Jan/2025 01:48:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 01:48:59,710 127.0.0.1 - - [20/Jan/2025 01:48:59] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 01:48:59,772 127.0.0.1 - - [20/Jan/2025 01:48:59] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 01:48:59,838 127.0.0.1 - - [20/Jan/2025 01:48:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 01:48:59,901 127.0.0.1 - - [20/Jan/2025 01:48:59] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 01:48:59,968 127.0.0.1 - - [20/Jan/2025 01:48:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 01:49:00,118 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/login","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 01:49:00,118 127.0.0.1 - - [20/Jan/2025 01:49:00] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 01:49:06,308 127.0.0.1 - - [20/Jan/2025 01:49:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-01-20 01:49:06,380 127.0.0.1 - - [20/Jan/2025 01:49:06] "GET /dashboard HTTP/1.1" 200 -
+2025-01-20 01:49:06,503 127.0.0.1 - - [20/Jan/2025 01:49:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 01:49:06,505 127.0.0.1 - - [20/Jan/2025 01:49:06] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 01:49:06,509 127.0.0.1 - - [20/Jan/2025 01:49:06] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 01:49:06,515 127.0.0.1 - - [20/Jan/2025 01:49:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 01:49:06,594 127.0.0.1 - - [20/Jan/2025 01:49:06] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 01:49:06,661 127.0.0.1 - - [20/Jan/2025 01:49:06] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 01:49:06,725 127.0.0.1 - - [20/Jan/2025 01:49:06] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 01:49:06,788 127.0.0.1 - - [20/Jan/2025 01:49:06] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 01:49:06,848 127.0.0.1 - - [20/Jan/2025 01:49:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 01:49:07,073 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/dashboard","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/login","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 01:49:07,074 127.0.0.1 - - [20/Jan/2025 01:49:07] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 01:50:18,149 127.0.0.1 - - [20/Jan/2025 01:50:18] "GET /dashboard HTTP/1.1" 200 -
+2025-01-20 01:50:18,270 127.0.0.1 - - [20/Jan/2025 01:50:18] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-01-20 01:50:18,275 127.0.0.1 - - [20/Jan/2025 01:50:18] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 01:50:18,281 127.0.0.1 - - [20/Jan/2025 01:50:18] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 01:50:18,476 127.0.0.1 - - [20/Jan/2025 01:50:18] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 01:50:18,725 127.0.0.1 - - [20/Jan/2025 01:50:18] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 01:50:18,786 127.0.0.1 - - [20/Jan/2025 01:50:18] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 01:50:18,850 127.0.0.1 - - [20/Jan/2025 01:50:18] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 01:50:18,922 127.0.0.1 - - [20/Jan/2025 01:50:18] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 01:50:18,989 127.0.0.1 - - [20/Jan/2025 01:50:18] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 01:50:19,334 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/dashboard","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/login","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 01:50:19,334 127.0.0.1 - - [20/Jan/2025 01:50:19] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 01:50:42,224 127.0.0.1 - - [20/Jan/2025 01:50:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 01:50:42,225 127.0.0.1 - - [20/Jan/2025 01:50:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 01:50:42,225 127.0.0.1 - - [20/Jan/2025 01:50:42] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 01:50:42,244 127.0.0.1 - - [20/Jan/2025 01:50:42] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2025-01-20 01:50:42,384 127.0.0.1 - - [20/Jan/2025 01:50:42] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-01-20 01:53:05,105 127.0.0.1 - - [20/Jan/2025 01:53:05] "GET /dashboard HTTP/1.1" 200 -
+2025-01-20 01:53:05,453 127.0.0.1 - - [20/Jan/2025 01:53:05] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 01:53:05,459 127.0.0.1 - - [20/Jan/2025 01:53:05] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 01:53:05,464 127.0.0.1 - - [20/Jan/2025 01:53:05] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 01:53:05,467 127.0.0.1 - - [20/Jan/2025 01:53:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 01:53:05,700 127.0.0.1 - - [20/Jan/2025 01:53:05] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 01:53:05,765 127.0.0.1 - - [20/Jan/2025 01:53:05] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 01:53:05,828 127.0.0.1 - - [20/Jan/2025 01:53:05] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 01:53:05,905 127.0.0.1 - - [20/Jan/2025 01:53:05] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 01:53:05,965 127.0.0.1 - - [20/Jan/2025 01:53:05] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 01:53:06,199 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/dashboard","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/login","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 01:53:06,199 127.0.0.1 - - [20/Jan/2025 01:53:06] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 10:36:52,074 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.135:5000
+2025-01-20 10:36:52,075 [33mPress CTRL+C to quit[0m
+2025-01-20 10:36:52,076  * Restarting with stat
+2025-01-20 10:36:52,320  * Debugger is active!
+2025-01-20 10:36:52,326  * Debugger PIN: 107-067-445
+2025-01-20 10:36:54,086 127.0.0.1 - - [20/Jan/2025 10:36:54] "GET /?vscodeBrowserReqId=1737369413783 HTTP/1.1" 200 -
+2025-01-20 10:36:59,515 127.0.0.1 - - [20/Jan/2025 10:36:59] "GET / HTTP/1.1" 200 -
+2025-01-20 10:36:59,666 127.0.0.1 - - [20/Jan/2025 10:36:59] "GET /?vscodeBrowserReqId=1737369419435 HTTP/1.1" 200 -
+2025-01-20 10:36:59,882 127.0.0.1 - - [20/Jan/2025 10:36:59] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:36:59,901 127.0.0.1 - - [20/Jan/2025 10:36:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 10:36:59,907 127.0.0.1 - - [20/Jan/2025 10:36:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 10:36:59,910 127.0.0.1 - - [20/Jan/2025 10:36:59] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 10:37:00,121 127.0.0.1 - - [20/Jan/2025 10:37:00] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:37:00,198 127.0.0.1 - - [20/Jan/2025 10:37:00] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:37:00,272 127.0.0.1 - - [20/Jan/2025 10:37:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:37:00,363 127.0.0.1 - - [20/Jan/2025 10:37:00] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 10:37:00,439 127.0.0.1 - - [20/Jan/2025 10:37:00] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 10:37:00,536 127.0.0.1 - - [20/Jan/2025 10:37:00] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2025-01-20 10:37:00,627 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 10:37:00,627 127.0.0.1 - - [20/Jan/2025 10:37:00] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 10:37:05,893 127.0.0.1 - - [20/Jan/2025 10:37:05] "GET / HTTP/1.1" 200 -
+2025-01-20 10:37:06,028 127.0.0.1 - - [20/Jan/2025 10:37:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 10:37:06,031 127.0.0.1 - - [20/Jan/2025 10:37:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 10:37:06,034 127.0.0.1 - - [20/Jan/2025 10:37:06] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 10:37:06,034 127.0.0.1 - - [20/Jan/2025 10:37:06] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:37:06,175 127.0.0.1 - - [20/Jan/2025 10:37:06] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:37:06,245 127.0.0.1 - - [20/Jan/2025 10:37:06] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:37:06,318 127.0.0.1 - - [20/Jan/2025 10:37:06] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:37:06,399 127.0.0.1 - - [20/Jan/2025 10:37:06] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 10:37:06,463 127.0.0.1 - - [20/Jan/2025 10:37:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 10:37:06,539 127.0.0.1 - - [20/Jan/2025 10:37:06] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-20 10:37:06,615 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 10:37:06,615 127.0.0.1 - - [20/Jan/2025 10:37:06] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 10:38:19,441 127.0.0.1 - - [20/Jan/2025 10:38:19] "GET / HTTP/1.1" 200 -
+2025-01-20 10:38:19,627 127.0.0.1 - - [20/Jan/2025 10:38:19] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 10:38:19,641 127.0.0.1 - - [20/Jan/2025 10:38:19] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:38:19,801 127.0.0.1 - - [20/Jan/2025 10:38:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 10:38:19,806 127.0.0.1 - - [20/Jan/2025 10:38:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 10:38:19,994 127.0.0.1 - - [20/Jan/2025 10:38:19] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:38:20,066 127.0.0.1 - - [20/Jan/2025 10:38:20] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:38:20,163 127.0.0.1 - - [20/Jan/2025 10:38:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:38:20,283 127.0.0.1 - - [20/Jan/2025 10:38:20] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 10:38:20,361 127.0.0.1 - - [20/Jan/2025 10:38:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 10:38:20,756 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 10:38:20,757 127.0.0.1 - - [20/Jan/2025 10:38:20] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 10:39:43,479  * Detected change in '/workspaces/2025SE-Mike.N-HSC-AssessmentTask1/main.py', reloading
+2025-01-20 10:39:43,526  * Restarting with stat
+2025-01-20 10:39:43,769  * Debugger is active!
+2025-01-20 10:39:43,769  * Debugger PIN: 107-067-445
+2025-01-20 10:39:46,437 127.0.0.1 - - [20/Jan/2025 10:39:46] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-20 10:39:46,594 127.0.0.1 - - [20/Jan/2025 10:39:46] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-01-20 10:39:46,753 127.0.0.1 - - [20/Jan/2025 10:39:46] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-01-20 10:39:46,948 127.0.0.1 - - [20/Jan/2025 10:39:46] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=vcEQi5pOQwcmLkaAwWcQ HTTP/1.1" 200 -
+2025-01-20 10:39:47,209 127.0.0.1 - - [20/Jan/2025 10:39:47] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-01-20 10:40:20,938  * Detected change in '/workspaces/2025SE-Mike.N-HSC-AssessmentTask1/main.py', reloading
+2025-01-20 10:40:20,974  * Restarting with stat
+2025-01-20 10:40:21,210  * Debugger is active!
+2025-01-20 10:40:21,211  * Debugger PIN: 107-067-445
+2025-01-20 10:40:30,902  * Detected change in '/workspaces/2025SE-Mike.N-HSC-AssessmentTask1/main.py', reloading
+2025-01-20 10:40:30,938  * Restarting with stat
+2025-01-20 10:40:31,208  * Debugger is active!
+2025-01-20 10:40:31,209  * Debugger PIN: 107-067-445
+2025-01-20 10:40:36,387 127.0.0.1 - - [20/Jan/2025 10:40:36] "GET / HTTP/1.1" 200 -
+2025-01-20 10:40:36,555 127.0.0.1 - - [20/Jan/2025 10:40:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 10:40:36,556 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"inline","line-number":81,"source-file":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-01-20 10:40:36,556 127.0.0.1 - - [20/Jan/2025 10:40:36] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 10:40:36,558 127.0.0.1 - - [20/Jan/2025 10:40:36] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:40:36,560 127.0.0.1 - - [20/Jan/2025 10:40:36] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 10:40:36,562 127.0.0.1 - - [20/Jan/2025 10:40:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 10:40:36,794 127.0.0.1 - - [20/Jan/2025 10:40:36] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:40:36,860 127.0.0.1 - - [20/Jan/2025 10:40:36] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:40:36,935 127.0.0.1 - - [20/Jan/2025 10:40:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:40:37,017 127.0.0.1 - - [20/Jan/2025 10:40:37] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 10:40:37,082 127.0.0.1 - - [20/Jan/2025 10:40:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 10:40:37,170 127.0.0.1 - - [20/Jan/2025 10:40:37] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-20 10:40:37,336 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 10:40:37,336 127.0.0.1 - - [20/Jan/2025 10:40:37] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 10:40:46,328 127.0.0.1 - - [20/Jan/2025 10:40:46] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-01-20 10:40:46,403 127.0.0.1 - - [20/Jan/2025 10:40:46] "GET /dashboard HTTP/1.1" 200 -
+2025-01-20 10:40:46,558 127.0.0.1 - - [20/Jan/2025 10:40:46] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 10:40:46,558 127.0.0.1 - - [20/Jan/2025 10:40:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 10:40:46,560 127.0.0.1 - - [20/Jan/2025 10:40:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 10:40:46,561 127.0.0.1 - - [20/Jan/2025 10:40:46] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:40:46,723 127.0.0.1 - - [20/Jan/2025 10:40:46] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:40:46,790 127.0.0.1 - - [20/Jan/2025 10:40:46] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:40:46,862 127.0.0.1 - - [20/Jan/2025 10:40:46] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 10:40:46,944 127.0.0.1 - - [20/Jan/2025 10:40:46] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 10:40:47,012 127.0.0.1 - - [20/Jan/2025 10:40:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 10:40:47,287 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/dashboard","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 10:40:47,287 127.0.0.1 - - [20/Jan/2025 10:40:47] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:34:04,788 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.90:5000
+2025-01-20 12:34:04,788 [33mPress CTRL+C to quit[0m
+2025-01-20 12:34:04,789  * Restarting with stat
+2025-01-20 12:34:05,041  * Debugger is active!
+2025-01-20 12:34:05,051  * Debugger PIN: 595-473-136
+2025-01-20 12:34:14,734 127.0.0.1 - - [20/Jan/2025 12:34:14] "GET / HTTP/1.1" 200 -
+2025-01-20 12:34:15,129 127.0.0.1 - - [20/Jan/2025 12:34:15] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:34:15,130 127.0.0.1 - - [20/Jan/2025 12:34:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 12:34:15,130 127.0.0.1 - - [20/Jan/2025 12:34:15] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:34:15,154 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","referrer":"https://github.com/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"inline","line-number":81,"source-file":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-01-20 12:34:15,155 127.0.0.1 - - [20/Jan/2025 12:34:15] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:34:15,156 127.0.0.1 - - [20/Jan/2025 12:34:15] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:34:15,363 127.0.0.1 - - [20/Jan/2025 12:34:15] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:34:15,430 127.0.0.1 - - [20/Jan/2025 12:34:15] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:34:15,494 127.0.0.1 - - [20/Jan/2025 12:34:15] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:34:15,571 127.0.0.1 - - [20/Jan/2025 12:34:15] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 12:34:15,638 127.0.0.1 - - [20/Jan/2025 12:34:15] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 12:34:15,725 127.0.0.1 - - [20/Jan/2025 12:34:15] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-20 12:34:15,894 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","referrer":"https://github.com/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 12:34:15,894 127.0.0.1 - - [20/Jan/2025 12:34:15] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:34:22,114 127.0.0.1 - - [20/Jan/2025 12:34:22] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-01-20 12:34:22,184 127.0.0.1 - - [20/Jan/2025 12:34:22] "GET /dashboard HTTP/1.1" 200 -
+2025-01-20 12:34:22,341 127.0.0.1 - - [20/Jan/2025 12:34:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:34:22,342 127.0.0.1 - - [20/Jan/2025 12:34:22] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:34:22,344 127.0.0.1 - - [20/Jan/2025 12:34:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 12:34:22,344 127.0.0.1 - - [20/Jan/2025 12:34:22] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:34:22,452 127.0.0.1 - - [20/Jan/2025 12:34:22] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:34:22,518 127.0.0.1 - - [20/Jan/2025 12:34:22] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:34:22,588 127.0.0.1 - - [20/Jan/2025 12:34:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:34:22,656 127.0.0.1 - - [20/Jan/2025 12:34:22] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 12:34:22,721 127.0.0.1 - - [20/Jan/2025 12:34:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 12:34:22,915 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/dashboard","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 12:34:22,915 127.0.0.1 - - [20/Jan/2025 12:34:22] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:34:46,143 127.0.0.1 - - [20/Jan/2025 12:34:46] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:34:46,145 127.0.0.1 - - [20/Jan/2025 12:34:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 12:34:46,148 127.0.0.1 - - [20/Jan/2025 12:34:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:34:46,380 127.0.0.1 - - [20/Jan/2025 12:34:46] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-01-20 12:39:00,159 127.0.0.1 - - [20/Jan/2025 12:39:00] "GET / HTTP/1.1" 200 -
+2025-01-20 12:39:00,573 127.0.0.1 - - [20/Jan/2025 12:39:00] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:00,593 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","referrer":"https://github.com/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"inline","line-number":81,"source-file":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-01-20 12:39:00,593 127.0.0.1 - - [20/Jan/2025 12:39:00] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:39:00,599 127.0.0.1 - - [20/Jan/2025 12:39:00] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-01-20 12:39:00,605 127.0.0.1 - - [20/Jan/2025 12:39:00] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-01-20 12:39:00,621 127.0.0.1 - - [20/Jan/2025 12:39:00] "GET /static/css/prism-okaidia.min.css HTTP/1.1" 200 -
+2025-01-20 12:39:00,900 127.0.0.1 - - [20/Jan/2025 12:39:00] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:00,960 127.0.0.1 - - [20/Jan/2025 12:39:00] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-01-20 12:39:00,975 127.0.0.1 - - [20/Jan/2025 12:39:00] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:01,176 127.0.0.1 - - [20/Jan/2025 12:39:01] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:01,275 127.0.0.1 - - [20/Jan/2025 12:39:01] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:01,282 127.0.0.1 - - [20/Jan/2025 12:39:01] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2025-01-20 12:39:01,354 127.0.0.1 - - [20/Jan/2025 12:39:01] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:01,498 127.0.0.1 - - [20/Jan/2025 12:39:01] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-20 12:39:01,688 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","referrer":"https://github.com/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 12:39:01,688 127.0.0.1 - - [20/Jan/2025 12:39:01] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:39:09,446 127.0.0.1 - - [20/Jan/2025 12:39:09] "GET / HTTP/1.1" 200 -
+2025-01-20 12:39:09,654 127.0.0.1 - - [20/Jan/2025 12:39:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 12:39:09,662 127.0.0.1 - - [20/Jan/2025 12:39:09] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:09,666 127.0.0.1 - - [20/Jan/2025 12:39:09] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:39:09,667 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","referrer":"https://github.com/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"inline","line-number":81,"source-file":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-01-20 12:39:09,668 127.0.0.1 - - [20/Jan/2025 12:39:09] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:39:09,669 127.0.0.1 - - [20/Jan/2025 12:39:09] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:39:09,880 127.0.0.1 - - [20/Jan/2025 12:39:09] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-01-20 12:39:09,972 127.0.0.1 - - [20/Jan/2025 12:39:09] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:10,050 127.0.0.1 - - [20/Jan/2025 12:39:10] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:10,124 127.0.0.1 - - [20/Jan/2025 12:39:10] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:10,216 127.0.0.1 - - [20/Jan/2025 12:39:10] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:10,295 127.0.0.1 - - [20/Jan/2025 12:39:10] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:10,377 127.0.0.1 - - [20/Jan/2025 12:39:10] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-20 12:39:10,450 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","referrer":"https://github.com/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 12:39:10,451 127.0.0.1 - - [20/Jan/2025 12:39:10] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:39:10,639 127.0.0.1 - - [20/Jan/2025 12:39:10] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2025-01-20 12:39:14,367 127.0.0.1 - - [20/Jan/2025 12:39:14] "GET /register HTTP/1.1" 200 -
+2025-01-20 12:39:14,611 127.0.0.1 - - [20/Jan/2025 12:39:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 12:39:14,613 127.0.0.1 - - [20/Jan/2025 12:39:14] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:39:14,623 127.0.0.1 - - [20/Jan/2025 12:39:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:39:14,633 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://code.jquery.com/jquery-3.6.0.min.js","status-code":200,"script-sample":""}}
+2025-01-20 12:39:14,633 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"inline","line-number":81,"source-file":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","status-code":200,"script-sample":""}}
+2025-01-20 12:39:14,634 127.0.0.1 - - [20/Jan/2025 12:39:14] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:39:14,634 127.0.0.1 - - [20/Jan/2025 12:39:14] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:39:14,797 127.0.0.1 - - [20/Jan/2025 12:39:14] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-01-20 12:39:14,893 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js","status-code":200,"script-sample":""}}
+2025-01-20 12:39:14,894 127.0.0.1 - - [20/Jan/2025 12:39:14] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:39:14,895 127.0.0.1 - - [20/Jan/2025 12:39:14] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:14,982 127.0.0.1 - - [20/Jan/2025 12:39:14] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:15,059 127.0.0.1 - - [20/Jan/2025 12:39:15] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:15,133 127.0.0.1 - - [20/Jan/2025 12:39:15] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:15,228 127.0.0.1 - - [20/Jan/2025 12:39:15] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:15,304 127.0.0.1 - - [20/Jan/2025 12:39:15] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2025-01-20 12:39:15,314 127.0.0.1 - - [20/Jan/2025 12:39:15] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:15,503 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 12:39:15,504 127.0.0.1 - - [20/Jan/2025 12:39:15] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:39:25,487 127.0.0.1 - - [20/Jan/2025 12:39:25] "GET /register HTTP/1.1" 200 -
+2025-01-20 12:39:25,680 127.0.0.1 - - [20/Jan/2025 12:39:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 12:39:25,681 127.0.0.1 - - [20/Jan/2025 12:39:25] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:39:25,685 127.0.0.1 - - [20/Jan/2025 12:39:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:39:25,695 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"inline","line-number":81,"source-file":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","status-code":200,"script-sample":""}}
+2025-01-20 12:39:25,696 127.0.0.1 - - [20/Jan/2025 12:39:25] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:39:25,696 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://code.jquery.com/jquery-3.6.0.min.js","status-code":200,"script-sample":""}}
+2025-01-20 12:39:25,697 127.0.0.1 - - [20/Jan/2025 12:39:25] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:39:25,839 127.0.0.1 - - [20/Jan/2025 12:39:25] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-01-20 12:39:25,932 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js","status-code":200,"script-sample":""}}
+2025-01-20 12:39:25,933 127.0.0.1 - - [20/Jan/2025 12:39:25] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:39:25,936 127.0.0.1 - - [20/Jan/2025 12:39:25] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:26,010 127.0.0.1 - - [20/Jan/2025 12:39:26] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:26,089 127.0.0.1 - - [20/Jan/2025 12:39:26] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:26,155 127.0.0.1 - - [20/Jan/2025 12:39:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:26,222 127.0.0.1 - - [20/Jan/2025 12:39:26] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:26,258 127.0.0.1 - - [20/Jan/2025 12:39:26] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2025-01-20 12:39:26,291 127.0.0.1 - - [20/Jan/2025 12:39:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 12:39:26,375 127.0.0.1 - - [20/Jan/2025 12:39:26] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-20 12:39:26,454 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 12:39:26,454 127.0.0.1 - - [20/Jan/2025 12:39:26] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:40:06,935 127.0.0.1 - - [20/Jan/2025 12:40:06] "GET /register HTTP/1.1" 200 -
+2025-01-20 12:40:07,135 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://code.jquery.com/jquery-3.6.0.min.js","status-code":200,"script-sample":""}}
+2025-01-20 12:40:07,137 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"inline","line-number":81,"source-file":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","status-code":200,"script-sample":""}}
+2025-01-20 12:40:07,137 127.0.0.1 - - [20/Jan/2025 12:40:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:40:07,137 127.0.0.1 - - [20/Jan/2025 12:40:07] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:40:07,137 127.0.0.1 - - [20/Jan/2025 12:40:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 12:40:07,138 127.0.0.1 - - [20/Jan/2025 12:40:07] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:40:07,138 127.0.0.1 - - [20/Jan/2025 12:40:07] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:40:07,274 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js","status-code":200,"script-sample":""}}
+2025-01-20 12:40:07,275 127.0.0.1 - - [20/Jan/2025 12:40:07] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:40:07,275 127.0.0.1 - - [20/Jan/2025 12:40:07] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:07,351 127.0.0.1 - - [20/Jan/2025 12:40:07] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:07,422 127.0.0.1 - - [20/Jan/2025 12:40:07] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:07,487 127.0.0.1 - - [20/Jan/2025 12:40:07] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:07,557 127.0.0.1 - - [20/Jan/2025 12:40:07] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:07,623 127.0.0.1 - - [20/Jan/2025 12:40:07] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:07,706 127.0.0.1 - - [20/Jan/2025 12:40:07] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-20 12:40:07,777 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 12:40:07,778 127.0.0.1 - - [20/Jan/2025 12:40:07] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:40:40,158 127.0.0.1 - - [20/Jan/2025 12:40:40] "GET /register HTTP/1.1" 200 -
+2025-01-20 12:40:40,304 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://code.jquery.com/jquery-3.6.0.min.js","status-code":200,"script-sample":""}}
+2025-01-20 12:40:40,305 127.0.0.1 - - [20/Jan/2025 12:40:40] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:40:40,313 127.0.0.1 - - [20/Jan/2025 12:40:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:40:40,313 127.0.0.1 - - [20/Jan/2025 12:40:40] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:40:40,315 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"inline","line-number":81,"source-file":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","status-code":200,"script-sample":""}}
+2025-01-20 12:40:40,316 127.0.0.1 - - [20/Jan/2025 12:40:40] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:40:40,316 127.0.0.1 - - [20/Jan/2025 12:40:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 12:40:40,403 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js","status-code":200,"script-sample":""}}
+2025-01-20 12:40:40,403 127.0.0.1 - - [20/Jan/2025 12:40:40] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:40:40,405 127.0.0.1 - - [20/Jan/2025 12:40:40] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:40,478 127.0.0.1 - - [20/Jan/2025 12:40:40] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:40,547 127.0.0.1 - - [20/Jan/2025 12:40:40] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:40,621 127.0.0.1 - - [20/Jan/2025 12:40:40] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:40,690 127.0.0.1 - - [20/Jan/2025 12:40:40] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:40,755 127.0.0.1 - - [20/Jan/2025 12:40:40] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:40,868 127.0.0.1 - - [20/Jan/2025 12:40:40] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-20 12:40:40,942 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 12:40:40,942 127.0.0.1 - - [20/Jan/2025 12:40:40] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:40:41,525 127.0.0.1 - - [20/Jan/2025 12:40:41] "[33mGET /login.html HTTP/1.1[0m" 404 -
+2025-01-20 12:40:41,715 127.0.0.1 - - [20/Jan/2025 12:40:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-20 12:40:44,681 127.0.0.1 - - [20/Jan/2025 12:40:44] "GET /register HTTP/1.1" 200 -
+2025-01-20 12:40:44,812 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js","status-code":200,"script-sample":""}}
+2025-01-20 12:40:44,812 127.0.0.1 - - [20/Jan/2025 12:40:44] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:40:44,813 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://code.jquery.com/jquery-3.6.0.min.js","status-code":200,"script-sample":""}}
+2025-01-20 12:40:44,814 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"inline","line-number":81,"source-file":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","status-code":200,"script-sample":""}}
+2025-01-20 12:40:44,814 127.0.0.1 - - [20/Jan/2025 12:40:44] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:40:44,814 127.0.0.1 - - [20/Jan/2025 12:40:44] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:40:44,979 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/register","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 12:40:44,979 127.0.0.1 - - [20/Jan/2025 12:40:44] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:40:47,410 127.0.0.1 - - [20/Jan/2025 12:40:47] "GET / HTTP/1.1" 200 -
+2025-01-20 12:40:47,555 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","referrer":"https://github.com/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"inline","line-number":81,"source-file":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-01-20 12:40:47,556 127.0.0.1 - - [20/Jan/2025 12:40:47] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:40:47,557 127.0.0.1 - - [20/Jan/2025 12:40:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 12:40:47,557 127.0.0.1 - - [20/Jan/2025 12:40:47] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:40:47,559 127.0.0.1 - - [20/Jan/2025 12:40:47] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:47,564 127.0.0.1 - - [20/Jan/2025 12:40:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:40:47,700 127.0.0.1 - - [20/Jan/2025 12:40:47] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:47,770 127.0.0.1 - - [20/Jan/2025 12:40:47] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:47,836 127.0.0.1 - - [20/Jan/2025 12:40:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:47,903 127.0.0.1 - - [20/Jan/2025 12:40:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:47,968 127.0.0.1 - - [20/Jan/2025 12:40:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:48,055 127.0.0.1 - - [20/Jan/2025 12:40:48] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-20 12:40:48,134 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","referrer":"https://github.com/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 12:40:48,134 127.0.0.1 - - [20/Jan/2025 12:40:48] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:40:53,730 127.0.0.1 - - [20/Jan/2025 12:40:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-01-20 12:40:53,806 127.0.0.1 - - [20/Jan/2025 12:40:53] "GET /dashboard HTTP/1.1" 200 -
+2025-01-20 12:40:53,972 127.0.0.1 - - [20/Jan/2025 12:40:53] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:40:53,973 127.0.0.1 - - [20/Jan/2025 12:40:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:40:53,975 127.0.0.1 - - [20/Jan/2025 12:40:53] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:53,976 127.0.0.1 - - [20/Jan/2025 12:40:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 12:40:54,126 127.0.0.1 - - [20/Jan/2025 12:40:54] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:54,197 127.0.0.1 - - [20/Jan/2025 12:40:54] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:54,268 127.0.0.1 - - [20/Jan/2025 12:40:54] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:54,335 127.0.0.1 - - [20/Jan/2025 12:40:54] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:54,399 127.0.0.1 - - [20/Jan/2025 12:40:54] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 12:40:54,586 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/dashboard","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 12:40:54,586 127.0.0.1 - - [20/Jan/2025 12:40:54] "POST /csp_report HTTP/1.1" 200 -
+2025-01-20 12:42:42,191 127.0.0.1 - - [20/Jan/2025 12:42:42] "GET /dashboard HTTP/1.1" 200 -
+2025-01-20 12:42:42,354 127.0.0.1 - - [20/Jan/2025 12:42:42] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:42:42,500 127.0.0.1 - - [20/Jan/2025 12:42:42] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:42:42,527 127.0.0.1 - - [20/Jan/2025 12:42:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-20 12:42:42,535 127.0.0.1 - - [20/Jan/2025 12:42:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-20 12:42:42,820 127.0.0.1 - - [20/Jan/2025 12:42:42] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:42:42,893 127.0.0.1 - - [20/Jan/2025 12:42:42] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:42:42,960 127.0.0.1 - - [20/Jan/2025 12:42:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-20 12:42:43,035 127.0.0.1 - - [20/Jan/2025 12:42:43] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-20 12:42:43,111 127.0.0.1 - - [20/Jan/2025 12:42:43] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-20 12:42:43,202 127.0.0.1 - - [20/Jan/2025 12:42:43] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-20 12:42:43,371 {"csp-report":{"document-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/dashboard","referrer":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://vigilant-dollop-699j7p6vj54rhrq6r-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-20 12:42:43,372 127.0.0.1 - - [20/Jan/2025 12:42:43] "POST /csp_report HTTP/1.1" 200 -
