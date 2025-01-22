@@ -1,3 +1,4 @@
+import os
 from flask import Flask, redirect, render_template, request, jsonify, flash, url_for
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 import requests
@@ -5,7 +6,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email, Length
-import os
 from flask_wtf import CSRFProtect
 import logging
 import userManagement as dbHandler
