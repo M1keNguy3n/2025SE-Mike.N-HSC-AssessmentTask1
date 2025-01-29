@@ -15,16 +15,20 @@ def list_diaries():
 
 def insert_diaries(developer, 
                    project,
-                   StartTime,
-                   EndTime,
-                   RepoURL,
-                   DevNote,
-                   CodeSnippet):
-    con = sql.connect(".database/database.db")
+                   start_time,
+                   end_time,
+                   repo_url,
+                   dev_note,
+                   code_snippet,
+                   language):
+    con = sql.connect(".databaseFiles/database.db")
     cur = con.cursor()
-    cur.execute("INSERT INTO diaries (developer, project, StartTime, EndTime, RepoURL, DevNote, CodeSnippet) VALUES (?,?,?,?,?,?,?)", (developer, project, StartTime, EndTime, RepoURL, DevNote, CodeSnippet))
-    cur.execute("UPDATE diaries SET TimeWorked = ROUND((strftime('%s', EndTime) - strftime('%s', StartTime)) / 60.0 / 15);")
-    cur.execute("UPDATE diaries SET TimeWorked = printf('%d:%02d', (TimeWorked * 15) / 60, (TimeWorked * 15) % 60);")
+    cur.execute('''
+            INSERT INTO diaries (developer, project, start_time, end_time, repo_url, dev_note, code_snippet, language)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (developer, project, start_time, end_time, repo_url, dev_note, code_snippet, language))
+    cur.execute("UPDATE diaries SET time_worked = ROUND((strftime('%s', end_time) - strftime('%s', start_time)) / 60.0 / 15);")
+    cur.execute("UPDATE diaries SET time_worked = printf('%d:%02d', (time_worked * 15) / 60, (time_worked * 15) % 60);")
     con.commit()
     con.close()
 

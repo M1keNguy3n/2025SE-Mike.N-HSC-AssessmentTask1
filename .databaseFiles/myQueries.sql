@@ -38,3 +38,6 @@ SET language = 'python';
 
 DELETE TimeWorked from diaries;
 SELECT * from diaries WHERE TimeWorked;
+
+ALTER TABLE diaries
+RENAME COLUMN TimeWorked TO time_worked;

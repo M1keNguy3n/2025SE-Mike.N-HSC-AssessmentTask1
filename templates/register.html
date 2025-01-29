@@ -1,45 +1,50 @@
 {% extends 'layout.html' %} {% block content %}
 <div class="container d-flex align-items-center justify-content-center vh-100">
-  <form
-    class="border p-4 rounded shadow"
-    style="width: 400px"
-    method="POST"
-    action="/register"
-  >
+  <form class="border p-4 rounded shadow" action="/register">
     <h2 class="text-center mb-4">Register</h2>
-
-    {% with messages = get_flashed_messages(with_categories=true) %} {% if
-    messages %} {% for category, message in messages %}
-    <div class="alert alert-{{ category }}">{{ message }}</div>
-    {% endfor %} {% endif %} {% endwith %}
 
     <!-- CSRF token -->
     {{ form.hidden_tag() }}
     <!-- Email input -->
     {{ form.email.label(class='form-label') }} {{
-    form.email(class='form-control') }}
+    form.email(class='form-control') }}{% if form.email.errors %} {% for error
+    in form.email.errors %}
+    <div class="alert alert-danger mt-3">{{ error }}</div>
+    {% endfor %} {% endif %}
 
     <!-- Password input -->
     {{ form.password.label(class='form-label') }} {{
-    form.password(class='form-control') }}
+    form.password(class='form-control') }}{% if form.password.errors %} {% for
+    error in form.password.errors %}
+    <div class="alert alert-danger mt-3">{{ error }}</div>
+    {% endfor %} {% endif %}
 
     <!-- Confirm Password input -->
     {{ form.confirm_password.label(class='form-label') }} {{
-    form.confirm_password(class='form-control') }}
+    form.confirm_password(class='form-control') }}{% if
+    form.confirm_password.errors %} {% for error in form.confirm_password.errors
+    %}
+    <div class="alert alert-danger mt-3">{{ error }}</div>
+    {% endfor %} {% endif %} {% with messages =
+    get_flashed_messages(with_categories=true) %} {% if messages %}
+    <div class="alert alert-danger mt-3" role="alert">
+      {% for category, message in messages %}
+      <div class="text-center">{{ message }}</div>
+      {% endfor %}
+    </div>
+    {% endif %} {% endwith %}
 
     <!-- Submit button -->
-    <div class="text-center">
-      <button type="submit" class="btn btn-primary btn-block mt-3">
-        Register
-      </button>
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary mt-3">Sign Up</button>
     </div>
+
+    <!-- Login button -->
     <p class="text-center mt-3">
       Already have an account?
-      <a href="login.html">Log in here</a>
+      <a href="{{ url_for('login') }}">Log in here</a>
     </p>
   </form>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 {% endblock %}

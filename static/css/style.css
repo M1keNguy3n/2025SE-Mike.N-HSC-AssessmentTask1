@@ -11,3 +11,15 @@ body {
 .collapse {
   margin-bottom: 15px;
 }
+
+.container-custom {
+  min-height: calc(100vh - 56px);
+  padding-top: 20px;
+}
+
+.form-custom {
+  width: 66.67%;
+  max-width: 1200px;
+  height: auto;
+  min-width: 800px;
+}

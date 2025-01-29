@@ -1,0 +1,84 @@
+{% extends "layout.html" %} {% block content %}
+<title>New Diary Entry</title>
+<div class="container align-items-center justify-content-center">
+  <form
+    id="diaryEntryForm"
+    class="border p-4 rounded shadow d-flex flex-column justify-content-between needs-validation"
+    method="POST"
+    action="/new_entry"
+    novalidate
+  >
+    <h2 class="text-center mb-4">New Diary Entry</h2>
+    {{ form.hidden_tag() }}
+
+    <div class="mb-3">
+      {{ form.developer.label(class="form-label") }} {{
+      form.developer(class="form-control", required=True) }} {% if
+      form.developer.errors %} {% for error in form.developer.errors %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.project.label(class="form-label") }} {{
+      form.project(class="form-control", required=True) }} {% if
+      form.project.errors %} {% for error in form.project.errors %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.start_time.label(class="form-label") }} {{
+      form.start_time(class="form-control", required=True) }} {% if
+      form.start_time.errors %} {% for error in form.start_time.errors %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.end_time.label(class="form-label") }} {{
+      form.end_time(class="form-control", required=True) }} {% if
+      form.end_time.errors %} {% for error in form.end_time.errors %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.repo_url.label(class="form-label") }} {{
+      form.repo_url(class="form-control", required=True) }} {% if
+      form.repo_url.errors %} {% for error in form.repo_url.errors %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.dev_note.label(class="form-label") }} {{
+      form.dev_note(class="form-control", rows=5, required=True) }} {% if
+      form.dev_note.errors %} {% for error in form.dev_note.errors %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.code_snippet.label(class="form-label") }} {{
+      form.code_snippet(class="form-control", rows=5, required=True) }} {% if
+      form.code_snippet.errors %} {% for error in form.code_snippet.errors %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.language.label(class="form-label") }} {{
+      form.language(class="form-select", required=True) }} {% if
+      form.language.errors %} {% for error in form.language.errors %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="text-center">
+      {{ form.submit(class="btn btn-primary w-100") }}
+    </div>
+  </form>
+</div>
+
+{% endblock %}
