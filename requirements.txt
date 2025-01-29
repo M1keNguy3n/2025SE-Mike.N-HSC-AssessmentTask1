@@ -1,8 +1,8 @@
 Flask
 bcrypt
 flask_wtf
-flask-csp
-flask-login
+flask_csp
+flask_login
 werkzeug
 wtforms
 os

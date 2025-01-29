@@ -41,3 +41,5 @@ SELECT * from diaries WHERE TimeWorked;
 
 ALTER TABLE diaries
 RENAME COLUMN TimeWorked TO time_worked;
+
+SELECT * FROM diaries WHERE developer = 'Jane Doe';
