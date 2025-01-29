@@ -1,25 +1,31 @@
 {% extends 'layout.html' %} {% block content %}
 <div class="container d-flex align-items-center justify-content-center vh-100">
-  <form class="border p-4 rounded shadow" method="POST" action="/login">
+  <form class="border p-4 rounded shadow" action="/login">
     <h2 class="text-center mb-4">Login</h2>
-
-    {% with messages = get_flashed_messages(with_categories=true) %} {% if
-    messages %} {% for category, message in messages %}
-    <div class="alert alert-{{ category }}">{{ message }}</div>
-    {% endfor %} {% endif %} {% endwith %} {{ form.hidden_tag() }}
+    {{ form.hidden_tag() }}
     <!-- Email input -->
     {{ form.email.label(class='form-label') }} {{
-    form.email(class='form-control') }}
+    form.email(class='form-control') }} {% if form.email.errors %} {% for error
+    in form.email.errors %}
+    <div class="alert alert-danger mt-3">{{ error }}</div>
+    {% endfor %} {% endif %}
 
     <!-- Password input -->
     {{ form.password.label(class='form-label') }} {{
-    form.password(class='form-control') }}
+    form.password(class='form-control') }} {% if form.password.errors %} {% for
+    error in form.password.errors %}
+    <div class="alert alert-danger mt-3">{{ error }}</div>
+    {% endfor %} {% endif %}
 
-    <!-- Submit button -->
-    <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+    <!-- Submit Button !-->
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary mt-3">Sign In</button>
+    </div>
 
+    <!-- Register Button !-->
     <p class="text-center mt-3">
-      Don't have an account? <a href="/register">Register here</a>
+      Don't have an account?
+      <a href="{{ url_for('register') }}">Register here</a>
     </p>
   </form>
 </div>

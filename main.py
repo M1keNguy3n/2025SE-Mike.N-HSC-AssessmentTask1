@@ -61,8 +61,8 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 
 class LoginForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Email()])
-    password = PasswordField('Password', validators=[DataRequired()])
+    email = StringField('Email', validators=[DataRequired(), Email(message='Please enter a valid email address')])
+    password = PasswordField('Password', validators=[DataRequired(), Length(min=8, max=20, message='Password must be between 8 and 20 characters')])
     submit = SubmitField('Sign In')
 
 
@@ -74,9 +74,9 @@ def load_user(user_id):
 #register implementation
 #Create a registration form using Flask-WTF
 class RegistrationForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Email()])
-    password = PasswordField('Password', validators=[DataRequired(), Length(min = 8, max = 20)])
-    confirm_password = PasswordField('Confirm Password', validators=[DataRequired()])
+    email = StringField('Email', validators=[DataRequired(), Email(message='Please enter a valid email address')])
+    password = PasswordField('Password', validators=[DataRequired(), Length(min = 8, max = 20, message='Password must be between 8 and 20 characters')])
+    confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), Length(min = 8, max = 20, message='Password must be between 8 and 20 characters')])
     submit = SubmitField('Register')
 
 @app.route("/", methods=["GET"])
@@ -84,31 +84,31 @@ class RegistrationForm(FlaskForm):
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        email = form.email.data.strip()
-        password = form.password.data.strip()
+        email = form.email.data
+        password = form.password.data
         # Check if user exists and password is correct
         user = dbHandler.get_users(email)
         if user and check_password_hash(user.password, password):
             login_user(user)
             return redirect(url_for('dashboard'))
-        
+        else:
         # Flash message if login fails
-        flash('Invalid email or password', 'danger')
+            flash('Invalid email or password', 'danger')
     return render_template('login.html', form=form)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
-        email = form.email.data.strip()
-        password = form.password.data.strip()
-        confirm_password = form.confirm_password.data.strip()
+        email = form.email.data
+        password = form.password.data
+        confirm_password = form.confirm_password.data
 
         # Check if the user already exists
         if email in users:
             flash('Email already registered. Please log in.', 'danger')
             return redirect(url_for('login'))
-
+            
         # Check if passwords match
         if password != confirm_password:
             flash('Passwords do not match. Please try again.', 'danger')
@@ -127,20 +127,43 @@ def register():
 
 #diary entry implementation
 class DiaryEntryForm(FlaskForm):
-    developer = StringField('Developer', validators=[DataRequired()])
-    project = StringField('Project', validators=[DataRequired()])
-    start_time = DateTimeField('Start Time', format='%Y-%m-%d %H:%M:%S', validators=[DataRequired()])
-    end_time = DateTimeField('End Time', format='%Y-%m-%d %H:%M:%S', validators=[DataRequired()])
-    repo_url = URLField('Repo URL', validators=[DataRequired(), URL()])
-    dev_note = TextAreaField('Developer Note', validators=[DataRequired()])
-    code_snippet = TextAreaField('Code Snippet', validators=[DataRequired()])
-    language = SelectField('Language', choices=[('HTML', 'HTML'), ('Python', 'Python'), ('JavaScript', 'JavaScript'), ('CSS', 'CSS')], validators=[DataRequired()])
+    developer = StringField('Developer', validators=[DataRequired(), Length(min=2, max=50, message='Developer name must be between 2 and 50 characters')])
+    project = StringField('Project', validators=[DataRequired(), Length(min=2, max=100, message='Project name must be between 2 and 100 characters')])
+    start_time = DateTimeField(
+        'Start Time', 
+        validators=[DataRequired(message='Please enter a valid date and time.')],
+        format='%Y-%m-%d %H:%M:%S',
+        render_kw={"placeholder": "YYYY-MM-DD HH:MM:SS"},
+    )
+    end_time = DateTimeField(
+        'End Time', 
+        validators=[DataRequired(message='Please enter a valid date and time.')],
+        format='%Y-%m-%d %H:%M:%S',
+        render_kw={"placeholder": "YYYY-MM-DD HH:MM:SS"},
+    )
+    repo_url = URLField(
+        'Repository URL',
+        validators=[DataRequired(), URL(message='Please enter a valid URL')])
+    dev_note = TextAreaField(
+        'Developer Note',
+        validators=[DataRequired(), Length(max=2000, message='Developer note must be less than 2000 characters')]
+    )
+    code_snippet = TextAreaField(
+        'Code Snippet',
+        validators=[DataRequired(), Length(max=2000, message='Code snippet must be less than 2000 characters')]
+    )
+    language = SelectField(
+        'Language',
+        choices=[('python', 'Python'), ('javascript', 'JavaScript'), ('html', 'HTML')],
+        validators=[DataRequired()]
+    )
     submit = SubmitField('Submit')
 
 @app.route('/new_entry', methods=['GET', 'POST'])
+@login_required
 def new_entry():
     form = DiaryEntryForm()
-    if form.validate_on_submit():
+    if request.method == "POST" and form.validate_on_submit():
         developer = form.developer.data
         project = form.project.data
         start_time = form.start_time.data.strftime('%Y-%m-%d %H:%M:%S')
@@ -152,7 +175,7 @@ def new_entry():
         dbHandler.insert_diaries(developer, project, start_time, end_time, repo_url, dev_note, code_snippet, language)
         
         flash('Diary entry submitted successfully!', 'success')
-        return redirect(url_for('new_entry'))
+        return redirect(url_for('dashboard'))
     return render_template('new_entry.html', form=form)
 
 # Redirect index.html to domain root for consistent UX
