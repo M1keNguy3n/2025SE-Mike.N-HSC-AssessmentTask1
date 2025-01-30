@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template, request, jsonify, flash, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 import requests
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -11,6 +11,7 @@ import logging
 import userManagement as dbHandler
 from userManagement import User
 from flask_cors import CORS
+import qrcode
 
 # Code snippet for logging a message
 # app.logger.critical("message")
@@ -68,7 +69,10 @@ class LoginForm(FlaskForm):
 
 @login_manager.user_loader
 def load_user(user_id):
-    return dbHandler.get_user_by_id(user_id)
+    user_data = dbHandler.get_user_by_id(user_id)
+    if user_data:
+        return User(user_data['id'], user_data['password'], user_data['otp_secret'])
+    return None
 
 
 #register implementation
@@ -89,12 +93,29 @@ def login():
         # Check if user exists and password is correct
         user = dbHandler.get_users(email)
         if user and check_password_hash(user.password, password):
-            login_user(user)
-            return redirect(url_for('dashboard'))
+            session['pre_2fa_user_id'] = user.id
+            return redirect(url_for('two_factor'))
         else:
         # Flash message if login fails
             flash('Invalid email or password', 'danger')
     return render_template('login.html', form=form)
+
+@app.route('/two_factor', methods=['GET', 'POST'])
+def two_factor():
+    if 'pre_2fa_user_id' not in session:
+        return redirect(url_for('login'))
+    user_id = session['pre_2fa_user_id']
+    user = dbHandler.get_user_by_id(user_id)
+    if request.method == 'POST':
+        token = request.form['token']
+        if user.verify_totp(token):
+            login_user(user)
+            session.pop('pre_2fa_user_id', None)
+            return redirect(url_for('dashboard'))
+        else:
+            flash('Invalid 2FA token. Please try again.', 'danger')
+    return render_template('two_factor.html')
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():

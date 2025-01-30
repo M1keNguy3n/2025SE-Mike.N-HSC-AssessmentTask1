@@ -2,11 +2,19 @@ import sqlite3 as sql
 from flask_login import UserMixin
 from jsonschema import validate
 from flask import current_app
+import pyotp
 
 class User(UserMixin):
-    def __init__(self, id, password):
+    def __init__(self, id, password, otp_secret):
         self.id = id
         self.password = password
+        self.otp_secret = otp_secret
+    def get_totp_uri(self):
+        return f"otpauth://totp/Diary:{self.id}?secret={self.otp_secret}&issuer=Diary"
+    def verify_totp(self, token):
+        totp = pyotp.TOTP(self.otp_secret)
+        return totp.verify(token)
+    
 
 def list_diaries():
 	con = sql.connect(".databaseFiles/database.db")
@@ -43,9 +51,10 @@ def insert_diaries(developer,
     con.close()
 
 def insert_users(email, password):
+    otp_secret = pyotp.random_base32()
     con = sql.connect(".databaseFiles/database.db")
     cur = con.cursor()
-    cur.execute("INSERT INTO users (email, password) VALUES (?,?)", (email, password))
+    cur.execute("INSERT INTO users (email, password) VALUES (?,?,?)", (email, password, otp_secret))
     con.commit()
     con.close()
     
@@ -53,21 +62,19 @@ def insert_users(email, password):
 def get_users(email):
     con = sql.connect(".databaseFiles/database.db")
     cur = con.cursor()
-    user_data = cur.execute("SELECT id, email, password FROM users WHERE email = ?", (email,)).fetchone()
+    user = cur.execute("SELECT id, email, password, otp_secret FROM users WHERE email = ?", (email,)).fetchone()
     con.close()
-    if user_data:
-        user_id, email, hashed_password = user_data
-        return User(user_id, hashed_password)
+    if user:
+        return {"id": user[0], "email": user[1], "password": user[2], "otp_secret": user[3]}
     return None
 
 def get_user_by_id(user_id):
     con = sql.connect(".databaseFiles/database.db")
     cur = con.cursor()
-    user_data = cur.execute("SELECT id, email, password FROM users WHERE id = ?", (user_id,)).fetchone()
+    user = cur.execute("SELECT id, email, password, otp_secret FROM users WHERE id = ?", (user_id,)).fetchone()
     con.close()
-    if user_data:
-        user_id, email, hashed_password = user_data
-        return User(user_id, hashed_password)
+    if user:
+        return {"id": user[0], "email": user[1], "password": user[2], "otp_secret": user[3]}
     return None
 
 

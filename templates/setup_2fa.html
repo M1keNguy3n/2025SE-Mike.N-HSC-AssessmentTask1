@@ -1,0 +1,18 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container mt-5">
+  <h2 class="text-center">Setup Two-Factor Authentication</h2>
+  <p class="text-center">
+    Scan this QR code with your Google Authenticator app:
+  </p>
+  <div class="d-flex justify-content-center">
+    <img
+      src="{{ url_for('static', filename='qrcodes/' + user_id + '.png') }}"
+      alt="QR Code"
+    />
+  </div>
+  <p class="text-center mt-3">
+    After scanning the QR code, enter the generated code in the app to complete
+    the setup.
+  </p>
+</div>
+{% endblock %}
