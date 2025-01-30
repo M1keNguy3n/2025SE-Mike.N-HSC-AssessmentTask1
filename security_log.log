@@ -7311,3 +7311,338 @@
 2025-01-29 19:37:24,164 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/login?csrf_token=ImZmMmM5M2MwZmEyM2NjMjBiNmIyMzQyN2I1ZjYzMGE0ZDM0OTEyZjIi.Z5og-w.xx0wr5VF2MNZcKcm9dwsWWv1Kt8&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/login?csrf_token=ImZmMmM5M2MwZmEyM2NjMjBiNmIyMzQyN2I1ZjYzMGE0ZDM0OTEyZjIi.Z5og9Q.rV3K2c3WHXacrRErGWln0DqkAKg&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
 2025-01-29 19:37:24,166 127.0.0.1 - - [29/Jan/2025 19:37:24] "POST /csp_report HTTP/1.1" 200 -
 2025-01-29 19:37:24,817 127.0.0.1 - - [29/Jan/2025 19:37:24] "[31m[1mGET /dashboard HTTP/1.1[0m" 401 -
+2025-01-30 10:39:25,268 The CSRF token is missing.
+2025-01-30 10:39:25,276 The CSRF token is missing.
+2025-01-30 10:40:16,043 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.159:5000
+2025-01-30 10:40:16,043 [33mPress CTRL+C to quit[0m
+2025-01-30 10:40:16,082  * Restarting with watchdog (windowsapi)
+2025-01-30 10:40:18,961  * Debugger is active!
+2025-01-30 10:40:18,973  * Debugger PIN: 511-361-186
+2025-01-30 10:40:37,348 127.0.0.1 - - [30/Jan/2025 10:40:37] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-30 10:40:38,540 127.0.0.1 - - [30/Jan/2025 10:40:38] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-01-30 10:40:38,777 127.0.0.1 - - [30/Jan/2025 10:40:38] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-01-30 10:40:39,552 127.0.0.1 - - [30/Jan/2025 10:40:39] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-01-30 10:40:40,312 127.0.0.1 - - [30/Jan/2025 10:40:40] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-30 10:41:00,315 127.0.0.1 - - [30/Jan/2025 10:41:00] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-30 10:41:00,589 127.0.0.1 - - [30/Jan/2025 10:41:00] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-30 10:41:01,111 127.0.0.1 - - [30/Jan/2025 10:41:01] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-30 10:41:01,344 127.0.0.1 - - [30/Jan/2025 10:41:01] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-30 10:41:01,537 127.0.0.1 - - [30/Jan/2025 10:41:01] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-30 10:42:00,181 127.0.0.1 - - [30/Jan/2025 10:42:00] "GET / HTTP/1.1" 200 -
+2025-01-30 10:42:00,497 127.0.0.1 - - [30/Jan/2025 10:42:00] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:42:00,500 127.0.0.1 - - [30/Jan/2025 10:42:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:42:00,950 127.0.0.1 - - [30/Jan/2025 10:42:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-30 10:42:01,107 127.0.0.1 - - [30/Jan/2025 10:42:01] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:42:01,336 127.0.0.1 - - [30/Jan/2025 10:42:01] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:42:01,579 127.0.0.1 - - [30/Jan/2025 10:42:01] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:42:01,933 127.0.0.1 - - [30/Jan/2025 10:42:01] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:42:02,225 127.0.0.1 - - [30/Jan/2025 10:42:02] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:42:02,478 127.0.0.1 - - [30/Jan/2025 10:42:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-30 10:42:02,727 127.0.0.1 - - [30/Jan/2025 10:42:02] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-30 10:42:02,767 127.0.0.1 - - [30/Jan/2025 10:42:02] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:42:02,937 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/","referrer":"","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:42:02,940 127.0.0.1 - - [30/Jan/2025 10:42:02] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:42:05,496 127.0.0.1 - - [30/Jan/2025 10:42:05] "GET /register HTTP/1.1" 200 -
+2025-01-30 10:42:05,787 127.0.0.1 - - [30/Jan/2025 10:42:05] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:42:05,795 127.0.0.1 - - [30/Jan/2025 10:42:05] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:42:05,797 127.0.0.1 - - [30/Jan/2025 10:42:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-30 10:42:05,842 127.0.0.1 - - [30/Jan/2025 10:42:05] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:42:06,104 127.0.0.1 - - [30/Jan/2025 10:42:06] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:42:06,304 127.0.0.1 - - [30/Jan/2025 10:42:06] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:42:06,508 127.0.0.1 - - [30/Jan/2025 10:42:06] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:42:06,715 127.0.0.1 - - [30/Jan/2025 10:42:06] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:42:06,927 127.0.0.1 - - [30/Jan/2025 10:42:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-30 10:42:07,146 127.0.0.1 - - [30/Jan/2025 10:42:07] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:42:07,459 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/register","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:42:07,461 127.0.0.1 - - [30/Jan/2025 10:42:07] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:42:08,523 127.0.0.1 - - [30/Jan/2025 10:42:08] "GET / HTTP/1.1" 200 -
+2025-01-30 10:42:08,826 127.0.0.1 - - [30/Jan/2025 10:42:08] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:42:09,192 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/","referrer":"","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:42:09,193 127.0.0.1 - - [30/Jan/2025 10:42:09] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:43:25,968 127.0.0.1 - - [30/Jan/2025 10:43:25] "GET / HTTP/1.1" 200 -
+2025-01-30 10:43:26,267 127.0.0.1 - - [30/Jan/2025 10:43:26] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:43:26,271 127.0.0.1 - - [30/Jan/2025 10:43:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-30 10:43:26,776 127.0.0.1 - - [30/Jan/2025 10:43:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:43:26,833 127.0.0.1 - - [30/Jan/2025 10:43:26] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:27,701 127.0.0.1 - - [30/Jan/2025 10:43:27] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:27,909 127.0.0.1 - - [30/Jan/2025 10:43:27] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:28,121 127.0.0.1 - - [30/Jan/2025 10:43:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:28,348 127.0.0.1 - - [30/Jan/2025 10:43:28] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:28,564 127.0.0.1 - - [30/Jan/2025 10:43:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:28,801 127.0.0.1 - - [30/Jan/2025 10:43:28] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-30 10:43:28,856 127.0.0.1 - - [30/Jan/2025 10:43:28] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:30,416 127.0.0.1 - - [30/Jan/2025 10:43:30] "GET /register HTTP/1.1" 200 -
+2025-01-30 10:43:30,541 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/","referrer":"","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:43:30,542 127.0.0.1 - - [30/Jan/2025 10:43:30] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:43:30,740 127.0.0.1 - - [30/Jan/2025 10:43:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-30 10:43:30,756 127.0.0.1 - - [30/Jan/2025 10:43:30] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:30,759 127.0.0.1 - - [30/Jan/2025 10:43:30] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:43:30,766 127.0.0.1 - - [30/Jan/2025 10:43:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:43:31,017 127.0.0.1 - - [30/Jan/2025 10:43:31] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:31,238 127.0.0.1 - - [30/Jan/2025 10:43:31] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:31,457 127.0.0.1 - - [30/Jan/2025 10:43:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:31,672 127.0.0.1 - - [30/Jan/2025 10:43:31] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:31,881 127.0.0.1 - - [30/Jan/2025 10:43:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:32,102 127.0.0.1 - - [30/Jan/2025 10:43:32] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:32,393 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/register","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:43:32,393 127.0.0.1 - - [30/Jan/2025 10:43:32] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:43:44,142 127.0.0.1 - - [30/Jan/2025 10:43:44] "GET /register?csrf_token=ImYyNmFhZjQ2NWIyMTk4Zjk5YmZlMDhjZjNiNTU3Y2YxNDQwZTFmZDIi.Z5r1Yg.8DVc2t_oUXuiq5C0j15NMjG24tY&email=minhkhuattuan.nguyen%40gmail.com&password=12345678&confirm_password=12345678 HTTP/1.1" 200 -
+2025-01-30 10:43:44,476 127.0.0.1 - - [30/Jan/2025 10:43:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:43:44,479 127.0.0.1 - - [30/Jan/2025 10:43:44] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:44,480 127.0.0.1 - - [30/Jan/2025 10:43:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-30 10:43:44,523 127.0.0.1 - - [30/Jan/2025 10:43:44] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:43:44,774 127.0.0.1 - - [30/Jan/2025 10:43:44] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:44,969 127.0.0.1 - - [30/Jan/2025 10:43:44] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:45,188 127.0.0.1 - - [30/Jan/2025 10:43:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:45,413 127.0.0.1 - - [30/Jan/2025 10:43:45] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:45,625 127.0.0.1 - - [30/Jan/2025 10:43:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:45,844 127.0.0.1 - - [30/Jan/2025 10:43:45] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:43:46,113 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=ImYyNmFhZjQ2NWIyMTk4Zjk5YmZlMDhjZjNiNTU3Y2YxNDQwZTFmZDIi.Z5r1Yg.8DVc2t_oUXuiq5C0j15NMjG24tY&email=minhkhuattuan.nguyen%40gmail.com&password=12345678&confirm_password=12345678","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/register","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:43:46,115 127.0.0.1 - - [30/Jan/2025 10:43:46] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:44:20,581 127.0.0.1 - - [30/Jan/2025 10:44:20] "GET /register?csrf_token=ImYyNmFhZjQ2NWIyMTk4Zjk5YmZlMDhjZjNiNTU3Y2YxNDQwZTFmZDIi.Z5r1cA.-aj-VMnh20sctupGsNdqSGmoDAA&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam HTTP/1.1" 200 -
+2025-01-30 10:44:20,909 127.0.0.1 - - [30/Jan/2025 10:44:20] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:20,975 127.0.0.1 - - [30/Jan/2025 10:44:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-30 10:44:20,979 127.0.0.1 - - [30/Jan/2025 10:44:20] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:44:20,979 127.0.0.1 - - [30/Jan/2025 10:44:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:44:22,037 127.0.0.1 - - [30/Jan/2025 10:44:22] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:22,597 127.0.0.1 - - [30/Jan/2025 10:44:22] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:22,859 127.0.0.1 - - [30/Jan/2025 10:44:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:23,093 127.0.0.1 - - [30/Jan/2025 10:44:23] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:23,309 127.0.0.1 - - [30/Jan/2025 10:44:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:23,553 127.0.0.1 - - [30/Jan/2025 10:44:23] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:23,788 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=ImYyNmFhZjQ2NWIyMTk4Zjk5YmZlMDhjZjNiNTU3Y2YxNDQwZTFmZDIi.Z5r1cA.-aj-VMnh20sctupGsNdqSGmoDAA&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=ImYyNmFhZjQ2NWIyMTk4Zjk5YmZlMDhjZjNiNTU3Y2YxNDQwZTFmZDIi.Z5r1Yg.8DVc2t_oUXuiq5C0j15NMjG24tY&email=minhkhuattuan.nguyen%40gmail.com&password=12345678&confirm_password=12345678","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:44:23,789 127.0.0.1 - - [30/Jan/2025 10:44:23] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:44:40,908 127.0.0.1 - - [30/Jan/2025 10:44:40] "GET /register?csrf_token=ImYyNmFhZjQ2NWIyMTk4Zjk5YmZlMDhjZjNiNTU3Y2YxNDQwZTFmZDIi.Z5r1cA.-aj-VMnh20sctupGsNdqSGmoDAA&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam HTTP/1.1" 200 -
+2025-01-30 10:44:41,223 127.0.0.1 - - [30/Jan/2025 10:44:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-30 10:44:41,235 127.0.0.1 - - [30/Jan/2025 10:44:41] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:44:41,235 127.0.0.1 - - [30/Jan/2025 10:44:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:44:41,295 127.0.0.1 - - [30/Jan/2025 10:44:41] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:41,529 127.0.0.1 - - [30/Jan/2025 10:44:41] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:41,738 127.0.0.1 - - [30/Jan/2025 10:44:41] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:41,955 127.0.0.1 - - [30/Jan/2025 10:44:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:42,179 127.0.0.1 - - [30/Jan/2025 10:44:42] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:42,388 127.0.0.1 - - [30/Jan/2025 10:44:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:42,677 127.0.0.1 - - [30/Jan/2025 10:44:42] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-01-30 10:44:42,732 127.0.0.1 - - [30/Jan/2025 10:44:42] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:42,944 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=ImYyNmFhZjQ2NWIyMTk4Zjk5YmZlMDhjZjNiNTU3Y2YxNDQwZTFmZDIi.Z5r1cA.-aj-VMnh20sctupGsNdqSGmoDAA&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=ImYyNmFhZjQ2NWIyMTk4Zjk5YmZlMDhjZjNiNTU3Y2YxNDQwZTFmZDIi.Z5r1Yg.8DVc2t_oUXuiq5C0j15NMjG24tY&email=minhkhuattuan.nguyen%40gmail.com&password=12345678&confirm_password=12345678","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:44:42,944 127.0.0.1 - - [30/Jan/2025 10:44:42] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:44:50,371 127.0.0.1 - - [30/Jan/2025 10:44:50] "GET /register?csrf_token=ImYyNmFhZjQ2NWIyMTk4Zjk5YmZlMDhjZjNiNTU3Y2YxNDQwZTFmZDIi.Z5r1qA.PUe9vsBKQLIJ0XJ7XPyUYXvBgjc&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam HTTP/1.1" 200 -
+2025-01-30 10:44:50,681 127.0.0.1 - - [30/Jan/2025 10:44:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-30 10:44:50,745 127.0.0.1 - - [30/Jan/2025 10:44:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:44:50,749 127.0.0.1 - - [30/Jan/2025 10:44:50] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:44:50,750 127.0.0.1 - - [30/Jan/2025 10:44:50] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:51,012 127.0.0.1 - - [30/Jan/2025 10:44:51] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:51,218 127.0.0.1 - - [30/Jan/2025 10:44:51] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:51,421 127.0.0.1 - - [30/Jan/2025 10:44:51] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:51,631 127.0.0.1 - - [30/Jan/2025 10:44:51] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:51,829 127.0.0.1 - - [30/Jan/2025 10:44:51] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:52,056 127.0.0.1 - - [30/Jan/2025 10:44:52] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:44:52,279 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=ImYyNmFhZjQ2NWIyMTk4Zjk5YmZlMDhjZjNiNTU3Y2YxNDQwZTFmZDIi.Z5r1qA.PUe9vsBKQLIJ0XJ7XPyUYXvBgjc&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=ImYyNmFhZjQ2NWIyMTk4Zjk5YmZlMDhjZjNiNTU3Y2YxNDQwZTFmZDIi.Z5r1cA.-aj-VMnh20sctupGsNdqSGmoDAA&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:44:52,280 127.0.0.1 - - [30/Jan/2025 10:44:52] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:45:08,627 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.159:5000
+2025-01-30 10:45:08,628 [33mPress CTRL+C to quit[0m
+2025-01-30 10:45:08,663  * Restarting with watchdog (windowsapi)
+2025-01-30 10:45:11,515  * Debugger is active!
+2025-01-30 10:45:11,535  * Debugger PIN: 511-361-186
+2025-01-30 10:45:14,963 127.0.0.1 - - [30/Jan/2025 10:45:14] "GET / HTTP/1.1" 200 -
+2025-01-30 10:45:17,192 127.0.0.1 - - [30/Jan/2025 10:45:17] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:17,197 127.0.0.1 - - [30/Jan/2025 10:45:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:45:17,209 127.0.0.1 - - [30/Jan/2025 10:45:17] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:45:17,218 127.0.0.1 - - [30/Jan/2025 10:45:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-30 10:45:17,573 127.0.0.1 - - [30/Jan/2025 10:45:17] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:17,789 127.0.0.1 - - [30/Jan/2025 10:45:17] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:17,999 127.0.0.1 - - [30/Jan/2025 10:45:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:18,215 127.0.0.1 - - [30/Jan/2025 10:45:18] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:18,417 127.0.0.1 - - [30/Jan/2025 10:45:18] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:18,655 127.0.0.1 - - [30/Jan/2025 10:45:18] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:18,936 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/","referrer":"","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:45:18,938 127.0.0.1 - - [30/Jan/2025 10:45:18] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:45:19,725 127.0.0.1 - - [30/Jan/2025 10:45:19] "GET /register HTTP/1.1" 200 -
+2025-01-30 10:45:20,048 127.0.0.1 - - [30/Jan/2025 10:45:20] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:45:20,056 127.0.0.1 - - [30/Jan/2025 10:45:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-30 10:45:20,058 127.0.0.1 - - [30/Jan/2025 10:45:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:45:20,104 127.0.0.1 - - [30/Jan/2025 10:45:20] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:20,330 127.0.0.1 - - [30/Jan/2025 10:45:20] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:20,534 127.0.0.1 - - [30/Jan/2025 10:45:20] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:20,740 127.0.0.1 - - [30/Jan/2025 10:45:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:20,948 127.0.0.1 - - [30/Jan/2025 10:45:20] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:21,201 127.0.0.1 - - [30/Jan/2025 10:45:21] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:21,421 127.0.0.1 - - [30/Jan/2025 10:45:21] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:21,965 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/register","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:45:21,965 127.0.0.1 - - [30/Jan/2025 10:45:21] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:45:29,199 127.0.0.1 - - [30/Jan/2025 10:45:29] "GET /register?csrf_token=IjM3YTJmMTYyNmRjMzg3ZDkzMDI1YjJkYTg5NDgxN2RmYzAxMTg3Mzki.Z5r1zw.FYS0EbtdW85XtCZWdd43sCR_N24&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam HTTP/1.1" 200 -
+2025-01-30 10:45:29,564 127.0.0.1 - - [30/Jan/2025 10:45:29] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:29,628 127.0.0.1 - - [30/Jan/2025 10:45:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-30 10:45:29,634 127.0.0.1 - - [30/Jan/2025 10:45:29] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:45:29,637 127.0.0.1 - - [30/Jan/2025 10:45:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:45:29,940 127.0.0.1 - - [30/Jan/2025 10:45:29] "GET /static/js/prism-python.min.js HTTP/1.1" 200 -
+2025-01-30 10:45:30,156 127.0.0.1 - - [30/Jan/2025 10:45:30] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:30,370 127.0.0.1 - - [30/Jan/2025 10:45:30] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:30,613 127.0.0.1 - - [30/Jan/2025 10:45:30] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:30,838 127.0.0.1 - - [30/Jan/2025 10:45:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:31,089 127.0.0.1 - - [30/Jan/2025 10:45:31] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:45:31,377 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=IjM3YTJmMTYyNmRjMzg3ZDkzMDI1YjJkYTg5NDgxN2RmYzAxMTg3Mzki.Z5r1zw.FYS0EbtdW85XtCZWdd43sCR_N24&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/register","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:45:31,378 127.0.0.1 - - [30/Jan/2025 10:45:31] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:45:48,048  * Detected change in 'D:\\Github\\2025SE-Mike.N-HSC-AssessmentTask1\\main.py', reloading
+2025-01-30 10:45:48,049  * Detected change in 'D:\\Github\\2025SE-Mike.N-HSC-AssessmentTask1\\main.py', reloading
+2025-01-30 10:45:48,050  * Detected change in 'D:\\Github\\2025SE-Mike.N-HSC-AssessmentTask1\\main.py', reloading
+2025-01-30 10:45:49,431  * Restarting with watchdog (windowsapi)
+2025-01-30 10:45:52,784  * Debugger is active!
+2025-01-30 10:45:52,791  * Debugger PIN: 511-361-186
+2025-01-30 10:46:05,787 127.0.0.1 - - [30/Jan/2025 10:46:05] "[31m[1mGET /dashboard HTTP/1.1[0m" 401 -
+2025-01-30 10:46:07,575 127.0.0.1 - - [30/Jan/2025 10:46:07] "GET /register?csrf_token=IjM3YTJmMTYyNmRjMzg3ZDkzMDI1YjJkYTg5NDgxN2RmYzAxMTg3Mzki.Z5r1zw.FYS0EbtdW85XtCZWdd43sCR_N24&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam HTTP/1.1" 200 -
+2025-01-30 10:46:08,373 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=IjM3YTJmMTYyNmRjMzg3ZDkzMDI1YjJkYTg5NDgxN2RmYzAxMTg3Mzki.Z5r1zw.FYS0EbtdW85XtCZWdd43sCR_N24&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/register","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:46:08,374 127.0.0.1 - - [30/Jan/2025 10:46:08] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:46:08,722 127.0.0.1 - - [30/Jan/2025 10:46:08] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:46:13,731 127.0.0.1 - - [30/Jan/2025 10:46:13] "GET /register?csrf_token=IjM4MmUwNjcyZmIxOWE5MmZhMzU1ODEwZjgxNDk1NDljNmE4MjVkZmEi.Z5r1_w.9yXJEQZAB_DJpbLeALCXjavuh9o&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam HTTP/1.1" 200 -
+2025-01-30 10:46:14,043 127.0.0.1 - - [30/Jan/2025 10:46:14] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:46:14,043 127.0.0.1 - - [30/Jan/2025 10:46:14] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:46:14,054 127.0.0.1 - - [30/Jan/2025 10:46:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:46:14,108 127.0.0.1 - - [30/Jan/2025 10:46:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-30 10:46:14,356 127.0.0.1 - - [30/Jan/2025 10:46:14] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:46:14,573 127.0.0.1 - - [30/Jan/2025 10:46:14] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:46:14,777 127.0.0.1 - - [30/Jan/2025 10:46:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:46:14,993 127.0.0.1 - - [30/Jan/2025 10:46:14] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:46:15,261 127.0.0.1 - - [30/Jan/2025 10:46:15] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-30 10:46:15,492 127.0.0.1 - - [30/Jan/2025 10:46:15] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:46:15,616 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=IjM4MmUwNjcyZmIxOWE5MmZhMzU1ODEwZjgxNDk1NDljNmE4MjVkZmEi.Z5r1_w.9yXJEQZAB_DJpbLeALCXjavuh9o&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=IjM3YTJmMTYyNmRjMzg3ZDkzMDI1YjJkYTg5NDgxN2RmYzAxMTg3Mzki.Z5r1zw.FYS0EbtdW85XtCZWdd43sCR_N24&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:46:15,618 127.0.0.1 - - [30/Jan/2025 10:46:15] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:46:53,542 127.0.0.1 - - [30/Jan/2025 10:46:53] "GET /register?csrf_token=IjM4MmUwNjcyZmIxOWE5MmZhMzU1ODEwZjgxNDk1NDljNmE4MjVkZmEi.Z5r2BQ.c-Lota1aUxO-lxa-gDaWXHRBwbE&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam HTTP/1.1" 200 -
+2025-01-30 10:46:53,872 127.0.0.1 - - [30/Jan/2025 10:46:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-30 10:46:53,879 127.0.0.1 - - [30/Jan/2025 10:46:53] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:46:53,934 127.0.0.1 - - [30/Jan/2025 10:46:53] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:46:53,934 127.0.0.1 - - [30/Jan/2025 10:46:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:46:54,199 127.0.0.1 - - [30/Jan/2025 10:46:54] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:46:54,413 127.0.0.1 - - [30/Jan/2025 10:46:54] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:46:54,681 127.0.0.1 - - [30/Jan/2025 10:46:54] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:46:54,893 127.0.0.1 - - [30/Jan/2025 10:46:54] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:46:55,101 127.0.0.1 - - [30/Jan/2025 10:46:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-30 10:46:55,351 127.0.0.1 - - [30/Jan/2025 10:46:55] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:46:55,572 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=IjM4MmUwNjcyZmIxOWE5MmZhMzU1ODEwZjgxNDk1NDljNmE4MjVkZmEi.Z5r2BQ.c-Lota1aUxO-lxa-gDaWXHRBwbE&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=IjM4MmUwNjcyZmIxOWE5MmZhMzU1ODEwZjgxNDk1NDljNmE4MjVkZmEi.Z5r1_w.9yXJEQZAB_DJpbLeALCXjavuh9o&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:46:55,573 127.0.0.1 - - [30/Jan/2025 10:46:55] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:47:03,276 127.0.0.1 - - [30/Jan/2025 10:47:03] "GET /register?csrf_token=IjM4MmUwNjcyZmIxOWE5MmZhMzU1ODEwZjgxNDk1NDljNmE4MjVkZmEi.Z5r2LQ.IInN8_PrwHQQ2tkm0wh-qFPi3gc&email=example%40gmail.com&password=mocnhicam&confirm_password=mocnhicam HTTP/1.1" 200 -
+2025-01-30 10:47:03,590 127.0.0.1 - - [30/Jan/2025 10:47:03] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:47:03,593 127.0.0.1 - - [30/Jan/2025 10:47:03] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:47:03,649 127.0.0.1 - - [30/Jan/2025 10:47:03] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:47:03,652 127.0.0.1 - - [30/Jan/2025 10:47:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-30 10:47:03,900 127.0.0.1 - - [30/Jan/2025 10:47:03] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:47:04,104 127.0.0.1 - - [30/Jan/2025 10:47:04] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:47:04,306 127.0.0.1 - - [30/Jan/2025 10:47:04] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:47:04,537 127.0.0.1 - - [30/Jan/2025 10:47:04] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:47:04,795 127.0.0.1 - - [30/Jan/2025 10:47:04] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-30 10:47:05,007 127.0.0.1 - - [30/Jan/2025 10:47:05] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:47:05,258 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=IjM4MmUwNjcyZmIxOWE5MmZhMzU1ODEwZjgxNDk1NDljNmE4MjVkZmEi.Z5r2LQ.IInN8_PrwHQQ2tkm0wh-qFPi3gc&email=example%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=IjM4MmUwNjcyZmIxOWE5MmZhMzU1ODEwZjgxNDk1NDljNmE4MjVkZmEi.Z5r2BQ.c-Lota1aUxO-lxa-gDaWXHRBwbE&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:47:05,260 127.0.0.1 - - [30/Jan/2025 10:47:05] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:47:17,508  * Detected change in 'D:\\Github\\2025SE-Mike.N-HSC-AssessmentTask1\\userManagement.py', reloading
+2025-01-30 10:47:17,510  * Detected change in 'D:\\Github\\2025SE-Mike.N-HSC-AssessmentTask1\\userManagement.py', reloading
+2025-01-30 10:47:18,751  * Restarting with watchdog (windowsapi)
+2025-01-30 10:47:21,900  * Debugger is active!
+2025-01-30 10:47:21,922  * Debugger PIN: 511-361-186
+2025-01-30 10:53:04,606 127.0.0.1 - - [30/Jan/2025 10:53:04] "GET /register?csrf_token=IjM4MmUwNjcyZmIxOWE5MmZhMzU1ODEwZjgxNDk1NDljNmE4MjVkZmEi.Z5r2Nw.CjlJf4kQ47mzgHhlL3E6kffOa0A&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam HTTP/1.1" 200 -
+2025-01-30 10:53:07,151 127.0.0.1 - - [30/Jan/2025 10:53:07] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:53:07,156 127.0.0.1 - - [30/Jan/2025 10:53:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:53:07,161 127.0.0.1 - - [30/Jan/2025 10:53:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-30 10:53:07,163 127.0.0.1 - - [30/Jan/2025 10:53:07] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:53:07,413 127.0.0.1 - - [30/Jan/2025 10:53:07] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:53:08,076 127.0.0.1 - - [30/Jan/2025 10:53:08] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:53:08,299 127.0.0.1 - - [30/Jan/2025 10:53:08] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:53:08,497 127.0.0.1 - - [30/Jan/2025 10:53:08] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:53:08,708 127.0.0.1 - - [30/Jan/2025 10:53:08] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-30 10:53:08,933 127.0.0.1 - - [30/Jan/2025 10:53:08] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:53:09,208 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=IjM4MmUwNjcyZmIxOWE5MmZhMzU1ODEwZjgxNDk1NDljNmE4MjVkZmEi.Z5r2Nw.CjlJf4kQ47mzgHhlL3E6kffOa0A&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=IjM4MmUwNjcyZmIxOWE5MmZhMzU1ODEwZjgxNDk1NDljNmE4MjVkZmEi.Z5r2LQ.IInN8_PrwHQQ2tkm0wh-qFPi3gc&email=example%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:53:09,208 127.0.0.1 - - [30/Jan/2025 10:53:09] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:53:42,621 127.0.0.1 - - [30/Jan/2025 10:53:42] "GET /register?csrf_token=ImJkNzIxOWFjYTcwNDIyMDA1NDA1MzQ1ZTA2YmU4OTM0YTYzMTA2NzQi.Z5r3oA.t94AEgL7GLOHh-HC16PoXMRfOg0&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam HTTP/1.1" 200 -
+2025-01-30 10:53:42,935 127.0.0.1 - - [30/Jan/2025 10:53:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:53:42,944 127.0.0.1 - - [30/Jan/2025 10:53:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-30 10:53:42,951 127.0.0.1 - - [30/Jan/2025 10:53:42] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:53:42,988 127.0.0.1 - - [30/Jan/2025 10:53:42] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-30 10:53:43,245 127.0.0.1 - - [30/Jan/2025 10:53:43] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:53:43,450 127.0.0.1 - - [30/Jan/2025 10:53:43] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:53:43,671 127.0.0.1 - - [30/Jan/2025 10:53:43] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-30 10:53:43,891 127.0.0.1 - - [30/Jan/2025 10:53:43] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:53:44,183 127.0.0.1 - - [30/Jan/2025 10:53:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-30 10:53:44,490 127.0.0.1 - - [30/Jan/2025 10:53:44] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 10:53:44,613 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=ImJkNzIxOWFjYTcwNDIyMDA1NDA1MzQ1ZTA2YmU4OTM0YTYzMTA2NzQi.Z5r3oA.t94AEgL7GLOHh-HC16PoXMRfOg0&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=IjM4MmUwNjcyZmIxOWE5MmZhMzU1ODEwZjgxNDk1NDljNmE4MjVkZmEi.Z5r2Nw.CjlJf4kQ47mzgHhlL3E6kffOa0A&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 10:53:44,614 127.0.0.1 - - [30/Jan/2025 10:53:44] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 10:53:51,535  * Detected change in 'D:\\Github\\2025SE-Mike.N-HSC-AssessmentTask1\\userManagement.py', reloading
+2025-01-30 10:53:51,542  * Detected change in 'D:\\Github\\2025SE-Mike.N-HSC-AssessmentTask1\\userManagement.py', reloading
+2025-01-30 10:53:52,859  * Restarting with watchdog (windowsapi)
+2025-01-30 10:53:55,924  * Debugger is active!
+2025-01-30 10:53:55,936  * Debugger PIN: 511-361-186
+2025-01-30 11:06:42,148 127.0.0.1 - - [30/Jan/2025 11:06:42] "GET /register?csrf_token=ImJkNzIxOWFjYTcwNDIyMDA1NDA1MzQ1ZTA2YmU4OTM0YTYzMTA2NzQi.Z5r3xg.WxL2LUvZuzfszi6IcToksfHbKao&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam HTTP/1.1" 200 -
+2025-01-30 11:06:45,058 127.0.0.1 - - [30/Jan/2025 11:06:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-30 11:06:45,063 127.0.0.1 - - [30/Jan/2025 11:06:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-30 11:06:45,065 127.0.0.1 - - [30/Jan/2025 11:06:45] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-01-30 11:06:45,071 127.0.0.1 - - [30/Jan/2025 11:06:45] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-01-30 11:06:45,341 127.0.0.1 - - [30/Jan/2025 11:06:45] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-01-30 11:06:45,545 127.0.0.1 - - [30/Jan/2025 11:06:45] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-01-30 11:06:45,751 127.0.0.1 - - [30/Jan/2025 11:06:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-30 11:06:45,969 127.0.0.1 - - [30/Jan/2025 11:06:45] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 11:06:46,175 127.0.0.1 - - [30/Jan/2025 11:06:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-30 11:06:46,405 127.0.0.1 - - [30/Jan/2025 11:06:46] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-30 11:06:46,649 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=ImJkNzIxOWFjYTcwNDIyMDA1NDA1MzQ1ZTA2YmU4OTM0YTYzMTA2NzQi.Z5r3xg.WxL2LUvZuzfszi6IcToksfHbKao&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/register?csrf_token=ImJkNzIxOWFjYTcwNDIyMDA1NDA1MzQ1ZTA2YmU4OTM0YTYzMTA2NzQi.Z5r3oA.t94AEgL7GLOHh-HC16PoXMRfOg0&email=minhkhuattuan.nguyen%40gmail.com&password=mocnhicam&confirm_password=mocnhicam","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-30 11:06:46,650 127.0.0.1 - - [30/Jan/2025 11:06:46] "POST /csp_report HTTP/1.1" 200 -
+2025-01-30 11:16:04,688  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask\\__init__.py', reloading
+2025-01-30 11:16:04,689  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask_limiter\\__init__.py', reloading
+2025-01-30 11:16:04,691  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask_limiter\\util.py', reloading
+2025-01-30 11:16:04,726  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask_login\\__init__.py', reloading
+2025-01-30 11:16:04,729  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\markupsafe\\__init__.py', reloading
+2025-01-30 11:16:04,730  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask\\json\\__init__.py', reloading
+2025-01-30 11:16:04,733  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask\\app.py', reloading
+2025-01-30 11:16:04,736  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask\\blueprints.py', reloading
+2025-01-30 11:16:04,739  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask\\config.py', reloading
+2025-01-30 11:16:04,740  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask\\ctx.py', reloading
+2025-01-30 11:16:04,743  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask\\globals.py', reloading
+2025-01-30 11:16:04,744  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask\\helpers.py', reloading
+2025-01-30 11:16:04,745  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask\\signals.py', reloading
+2025-01-30 11:16:04,747  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask\\templating.py', reloading
+2025-01-30 11:16:04,772  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\werkzeug\\utils.py', reloading
+2025-01-30 11:16:04,773  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-01-30 11:16:04,777  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask\\typing.py', reloading
+2025-01-30 11:16:04,783  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask\\scaffold.py', reloading
+2025-01-30 11:16:04,785  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask\\sessions.py', reloading
+2025-01-30 11:16:04,786  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask\\wrappers.py', reloading
+2025-01-30 11:16:04,797  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\werkzeug\\local.py', reloading
+2025-01-30 11:16:04,802  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask_limiter\\constants.py', reloading
+2025-01-30 11:16:04,805  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask_limiter\\extension.py', reloading
+2025-01-30 11:16:04,807  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask_limiter\\wrappers.py', reloading
+2025-01-30 11:16:04,810  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask_limiter\\typing.py', reloading
+2025-01-30 11:16:04,864  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\functools.py', reloading
+2025-01-30 11:16:04,879  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\jinja2\\__init__.py', reloading
+2025-01-30 11:16:04,882  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask\\json\\tag.py', reloading
+2025-01-30 11:16:04,890  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-01-30 11:16:04,892  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-01-30 11:16:04,895  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\werkzeug\\_internal.py', reloading
+2025-01-30 11:16:04,897  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2025-01-30 11:16:04,901  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-01-30 11:16:04,903  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\werkzeug\\security.py', reloading
+2025-01-30 11:16:04,930  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask_wtf\\__init__.py', reloading
+2025-01-30 11:16:04,936  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask_login\\login_manager.py', reloading
+2025-01-30 11:16:04,938  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask_login\\mixins.py', reloading
+2025-01-30 11:16:04,940  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask_login\\signals.py', reloading
+2025-01-30 11:16:04,943  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask_login\\utils.py', reloading
+2025-01-30 11:16:04,947  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\referencing\\jsonschema.py', reloading
+2025-01-30 11:16:04,949  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\werkzeug\\datastructures.py', reloading
+2025-01-30 11:16:04,950  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\referencing\\typing.py', reloading
+2025-01-30 11:16:04,951  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\werkzeug\\__init__.py', reloading
+2025-01-30 11:16:04,954  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\jinja2\\environment.py', reloading
+2025-01-30 11:16:04,960  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask_wtf\\csrf.py', reloading
+2025-01-30 11:16:04,961  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\flask_wtf\\form.py', reloading
+2025-01-30 11:16:04,968  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\blinker\\__init__.py', reloading
+2025-01-30 11:16:04,971  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\blinker\\base.py', reloading
+2025-01-30 11:16:04,972  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\pyotp\\__init__.py', reloading
+2025-01-30 11:16:04,974  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\pyotp\\otp.py', reloading
+2025-01-30 11:16:04,976  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\pyotp\\totp.py', reloading
+2025-01-30 11:16:05,003  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\wtforms\\fields\\simple.py', reloading
+2025-01-30 11:16:05,004  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\wtforms\\__init__.py', reloading
+2025-01-30 11:16:05,005  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\wtforms\\fields\\core.py', reloading
+2025-01-30 11:16:05,071  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\qrcode\\__init__.py', reloading
+2025-01-30 11:16:12,070  * Restarting with watchdog (windowsapi)
+2025-01-30 11:16:14,859  * Debugger is active!
+2025-01-30 11:16:14,877  * Debugger PIN: 511-361-186
