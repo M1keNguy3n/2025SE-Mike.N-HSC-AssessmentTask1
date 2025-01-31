@@ -5,12 +5,15 @@ from flask import current_app
 import pyotp
 
 class User(UserMixin):
-    def __init__(self, id, password, otp_secret):
+    def __init__(self, id, email, password, otp_secret):
         self.id = id
+        self.email = email
         self.password = password
-        self.otp_secret = otp_secret
+        self.otp_secret = otp_secret or pyotp.random_base32()
+
     def get_totp_uri(self):
         return f"otpauth://totp/Diary:{self.id}?secret={self.otp_secret}&issuer=Diary"
+    
     def verify_totp(self, token):
         totp = pyotp.TOTP(self.otp_secret)
         return totp.verify(token)
@@ -50,11 +53,10 @@ def insert_diaries(developer,
     con.commit()
     con.close()
 
-def insert_users(email, password):
-    otp_secret = pyotp.random_base32()
+def insert_users(email, password, otp_secret):
     con = sql.connect(".databaseFiles/database.db")
     cur = con.cursor()
-    cur.execute("INSERT INTO users (email, password) VALUES (?,?,?)", (email, password, otp_secret))
+    cur.execute("INSERT INTO users (email, password, otp_secret) VALUES (?, ?, ?)", (email, password, otp_secret))
     con.commit()
     con.close()
     
@@ -65,7 +67,7 @@ def get_users(email):
     user = cur.execute("SELECT id, email, password, otp_secret FROM users WHERE email = ?", (email,)).fetchone()
     con.close()
     if user:
-        return {"id": user[0], "email": user[1], "password": user[2], "otp_secret": user[3]}
+        return User(user[0], user[1], user[2], user[3])
     return None
 
 def get_user_by_id(user_id):
@@ -74,9 +76,15 @@ def get_user_by_id(user_id):
     user = cur.execute("SELECT id, email, password, otp_secret FROM users WHERE id = ?", (user_id,)).fetchone()
     con.close()
     if user:
-        return {"id": user[0], "email": user[1], "password": user[2], "otp_secret": user[3]}
+        return User(user[0], user[1], user[2], user[3])
     return None
 
+def update_user_otp_secret(user_id, otp_secret):
+    con = sql.connect(".databaseFiles/database.db")
+    cur = con.cursor()
+    cur.execute("UPDATE users SET otp_secret = ? WHERE id = ?", (otp_secret, user_id))
+    con.commit()
+    con.close()
 
 def insert_diaries_api(data):
     if validate_json(data):

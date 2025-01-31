@@ -1,6 +1,10 @@
 {% extends 'layout.html' %} {% block content %}
 <div class="container d-flex align-items-center justify-content-center vh-100">
-  <form class="border p-4 rounded shadow" action="/register">
+  <form
+    class="border p-4 rounded shadow"
+    method="POST"
+    action="{{url_for('register')}}"
+  >
     <h2 class="text-center mb-4">Register</h2>
 
     <!-- CSRF token -->

@@ -17,8 +17,26 @@
     <link rel="stylesheet" href="static/css/style.css" />
   </head>
   <body>
-    {% include "partials/menu.html" %} {% block content %}{% endblock %} {%
-    include "partials/footer.html" %}
+    {% include "partials/menu.html" %} {% with messages =
+    get_flashed_messages(with_categories=true) %} {% if messages %}
+    <div class="container mt-3">
+      {% for category, message in messages %}
+      <div
+        class="alert alert-{{ category }} alert-dismissible fade show"
+        role="alert"
+      >
+        {{ message }}
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %} {% endwith %}{% block content %}{% endblock %} {% include
+    "partials/footer.html" %}
     <script src="static/js/prism.min.js"></script>
     <script src="static/js/prism-python.min.js"></script>
     <script src="static/js/prism-javascript.min.js"></script>
