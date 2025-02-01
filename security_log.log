@@ -9629,3 +9629,146 @@
 2025-01-31 22:55:40,720 127.0.0.1 - - [31/Jan/2025 22:55:40] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
 2025-01-31 22:55:40,888 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/two_factor","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/login","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
 2025-01-31 22:55:40,888 127.0.0.1 - - [31/Jan/2025 22:55:40] "POST /csp_report HTTP/1.1" 200 -
+2025-02-01 09:25:04,158 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.22.51.225:5000
+2025-02-01 09:25:04,159 [33mPress CTRL+C to quit[0m
+2025-02-01 09:25:04,214  * Restarting with watchdog (windowsapi)
+2025-02-01 09:25:06,832  * Debugger is active!
+2025-02-01 09:25:06,847  * Debugger PIN: 511-361-186
+2025-02-01 09:25:41,714 127.0.0.1 - - [01/Feb/2025 09:25:41] "GET / HTTP/1.1" 200 -
+2025-02-01 09:25:44,657 127.0.0.1 - - [01/Feb/2025 09:25:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 09:25:44,664 127.0.0.1 - - [01/Feb/2025 09:25:44] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:25:44,671 127.0.0.1 - - [01/Feb/2025 09:25:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:25:44,753 127.0.0.1 - - [01/Feb/2025 09:25:44] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:25:45,157 127.0.0.1 - - [01/Feb/2025 09:25:45] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:25:45,386 127.0.0.1 - - [01/Feb/2025 09:25:45] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:25:45,685 127.0.0.1 - - [01/Feb/2025 09:25:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:25:46,073 127.0.0.1 - - [01/Feb/2025 09:25:46] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-02-01 09:25:46,317 127.0.0.1 - - [01/Feb/2025 09:25:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-02-01 09:25:46,892 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/","referrer":"https://global.rel.tunnels.api.visualstudio.com/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-02-01 09:25:46,894 127.0.0.1 - - [01/Feb/2025 09:25:46] "POST /csp_report HTTP/1.1" 200 -
+2025-02-01 09:25:47,060 127.0.0.1 - - [01/Feb/2025 09:25:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-02-01 09:25:54,082 127.0.0.1 - - [01/Feb/2025 09:25:54] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-01 09:25:54,289 127.0.0.1 - - [01/Feb/2025 09:25:54] "GET /two_factor HTTP/1.1" 200 -
+2025-02-01 09:25:54,554 127.0.0.1 - - [01/Feb/2025 09:25:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 09:25:54,583 127.0.0.1 - - [01/Feb/2025 09:25:54] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:25:54,586 127.0.0.1 - - [01/Feb/2025 09:25:54] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:25:54,610 127.0.0.1 - - [01/Feb/2025 09:25:54] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:25:54,899 127.0.0.1 - - [01/Feb/2025 09:25:54] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:25:55,118 127.0.0.1 - - [01/Feb/2025 09:25:55] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:25:55,318 127.0.0.1 - - [01/Feb/2025 09:25:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:25:55,525 127.0.0.1 - - [01/Feb/2025 09:25:55] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-02-01 09:25:55,726 127.0.0.1 - - [01/Feb/2025 09:25:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-02-01 09:25:55,997 127.0.0.1 - - [01/Feb/2025 09:25:55] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-02-01 09:25:56,242 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/two_factor","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-02-01 09:25:56,242 127.0.0.1 - - [01/Feb/2025 09:25:56] "POST /csp_report HTTP/1.1" 200 -
+2025-02-01 09:26:17,554 127.0.0.1 - - [01/Feb/2025 09:26:17] "[32mPOST /two_factor HTTP/1.1[0m" 302 -
+2025-02-01 09:26:17,774 127.0.0.1 - - [01/Feb/2025 09:26:17] "GET /dashboard HTTP/1.1" 200 -
+2025-02-01 09:26:18,054 127.0.0.1 - - [01/Feb/2025 09:26:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 09:26:18,112 127.0.0.1 - - [01/Feb/2025 09:26:18] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:18,116 127.0.0.1 - - [01/Feb/2025 09:26:18] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:26:18,117 127.0.0.1 - - [01/Feb/2025 09:26:18] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:18,121 127.0.0.1 - - [01/Feb/2025 09:26:18] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:18,124 127.0.0.1 - - [01/Feb/2025 09:26:18] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:18,125 127.0.0.1 - - [01/Feb/2025 09:26:18] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:18,128 127.0.0.1 - - [01/Feb/2025 09:26:18] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:18,128 127.0.0.1 - - [01/Feb/2025 09:26:18] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:26:18,442 127.0.0.1 - - [01/Feb/2025 09:26:18] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:18,695 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/dashboard","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/two_factor","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-02-01 09:26:18,695 127.0.0.1 - - [01/Feb/2025 09:26:18] "POST /csp_report HTTP/1.1" 200 -
+2025-02-01 09:26:24,115 127.0.0.1 - - [01/Feb/2025 09:26:24] "GET /login HTTP/1.1" 200 -
+2025-02-01 09:26:24,439 127.0.0.1 - - [01/Feb/2025 09:26:24] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:24,512 127.0.0.1 - - [01/Feb/2025 09:26:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:26:24,526 127.0.0.1 - - [01/Feb/2025 09:26:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 09:26:24,526 127.0.0.1 - - [01/Feb/2025 09:26:24] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:26:24,787 127.0.0.1 - - [01/Feb/2025 09:26:24] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:24,991 127.0.0.1 - - [01/Feb/2025 09:26:24] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:25,233 127.0.0.1 - - [01/Feb/2025 09:26:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:25,588 127.0.0.1 - - [01/Feb/2025 09:26:25] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:25,772 127.0.0.1 - - [01/Feb/2025 09:26:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:25,973 127.0.0.1 - - [01/Feb/2025 09:26:25] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:26,201 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/login","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/dashboard","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-02-01 09:26:26,203 127.0.0.1 - - [01/Feb/2025 09:26:26] "POST /csp_report HTTP/1.1" 200 -
+2025-02-01 09:26:28,542 127.0.0.1 - - [01/Feb/2025 09:26:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-01 09:26:28,761 127.0.0.1 - - [01/Feb/2025 09:26:28] "GET /two_factor HTTP/1.1" 200 -
+2025-02-01 09:26:29,039 127.0.0.1 - - [01/Feb/2025 09:26:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:26:29,041 127.0.0.1 - - [01/Feb/2025 09:26:29] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:29,100 127.0.0.1 - - [01/Feb/2025 09:26:29] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:26:29,101 127.0.0.1 - - [01/Feb/2025 09:26:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 09:26:29,343 127.0.0.1 - - [01/Feb/2025 09:26:29] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:29,578 127.0.0.1 - - [01/Feb/2025 09:26:29] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:29,797 127.0.0.1 - - [01/Feb/2025 09:26:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:30,092 127.0.0.1 - - [01/Feb/2025 09:26:30] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:30,400 127.0.0.1 - - [01/Feb/2025 09:26:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:30,657 127.0.0.1 - - [01/Feb/2025 09:26:30] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:30,769 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/two_factor","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/login","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-02-01 09:26:30,769 127.0.0.1 - - [01/Feb/2025 09:26:30] "POST /csp_report HTTP/1.1" 200 -
+2025-02-01 09:26:30,920 127.0.0.1 - - [01/Feb/2025 09:26:30] "POST /two_factor HTTP/1.1" 200 -
+2025-02-01 09:26:31,218 127.0.0.1 - - [01/Feb/2025 09:26:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 09:26:31,244 127.0.0.1 - - [01/Feb/2025 09:26:31] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:26:31,248 127.0.0.1 - - [01/Feb/2025 09:26:31] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:31,286 127.0.0.1 - - [01/Feb/2025 09:26:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:26:31,600 127.0.0.1 - - [01/Feb/2025 09:26:31] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:31,801 127.0.0.1 - - [01/Feb/2025 09:26:31] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:32,067 127.0.0.1 - - [01/Feb/2025 09:26:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:32,342 127.0.0.1 - - [01/Feb/2025 09:26:32] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:32,636 127.0.0.1 - - [01/Feb/2025 09:26:32] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:32,918 127.0.0.1 - - [01/Feb/2025 09:26:32] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-02-01 09:26:33,038 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/two_factor","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/two_factor","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-02-01 09:26:33,039 127.0.0.1 - - [01/Feb/2025 09:26:33] "POST /csp_report HTTP/1.1" 200 -
+2025-02-01 09:26:41,320  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\_pytest\\capture.py', reloading
+2025-02-01 09:26:41,576  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\_pytest\\doctest.py', reloading
+2025-02-01 09:26:41,805  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\_pytest\\compat.py', reloading
+2025-02-01 09:26:41,924  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\_pytest\\junitxml.py', reloading
+2025-02-01 09:26:43,086  * Restarting with watchdog (windowsapi)
+2025-02-01 09:26:46,255  * Debugger is active!
+2025-02-01 09:26:46,273  * Debugger PIN: 511-361-186
+2025-02-01 09:27:18,304 The CSRF session token is missing.
+2025-02-01 09:27:18,307 127.0.0.1 - - [01/Feb/2025 09:27:18] "[31m[1mPOST /two_factor HTTP/1.1[0m" 400 -
+2025-02-01 09:27:18,570 127.0.0.1 - - [01/Feb/2025 09:27:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-01 09:27:20,730 127.0.0.1 - - [01/Feb/2025 09:27:20] "[32mGET /two_factor HTTP/1.1[0m" 302 -
+2025-02-01 09:27:21,033 127.0.0.1 - - [01/Feb/2025 09:27:21] "GET /login HTTP/1.1" 200 -
+2025-02-01 09:27:21,977 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/login","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/login","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-02-01 09:27:21,978 127.0.0.1 - - [01/Feb/2025 09:27:21] "POST /csp_report HTTP/1.1" 200 -
+2025-02-01 09:27:22,080 127.0.0.1 - - [01/Feb/2025 09:27:22] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:23,970 127.0.0.1 - - [01/Feb/2025 09:27:23] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-01 09:27:24,199 127.0.0.1 - - [01/Feb/2025 09:27:24] "GET /two_factor HTTP/1.1" 200 -
+2025-02-01 09:27:24,494 127.0.0.1 - - [01/Feb/2025 09:27:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 09:27:24,497 127.0.0.1 - - [01/Feb/2025 09:27:24] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:27:24,549 127.0.0.1 - - [01/Feb/2025 09:27:24] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:24,550 127.0.0.1 - - [01/Feb/2025 09:27:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:27:24,902 127.0.0.1 - - [01/Feb/2025 09:27:24] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:25,135 127.0.0.1 - - [01/Feb/2025 09:27:25] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:25,418 127.0.0.1 - - [01/Feb/2025 09:27:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:25,704 127.0.0.1 - - [01/Feb/2025 09:27:25] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:26,504 127.0.0.1 - - [01/Feb/2025 09:27:26] "POST /two_factor HTTP/1.1" 200 -
+2025-02-01 09:27:26,749 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/two_factor","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/login","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-02-01 09:27:26,750 127.0.0.1 - - [01/Feb/2025 09:27:26] "POST /csp_report HTTP/1.1" 200 -
+2025-02-01 09:27:27,066 127.0.0.1 - - [01/Feb/2025 09:27:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 09:27:27,070 127.0.0.1 - - [01/Feb/2025 09:27:27] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:27:27,071 127.0.0.1 - - [01/Feb/2025 09:27:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:27:27,540 127.0.0.1 - - [01/Feb/2025 09:27:27] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:27,817 127.0.0.1 - - [01/Feb/2025 09:27:27] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:28,069 127.0.0.1 - - [01/Feb/2025 09:27:28] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:28,309 127.0.0.1 - - [01/Feb/2025 09:27:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:28,524 127.0.0.1 - - [01/Feb/2025 09:27:28] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2025-02-01 09:27:28,885 127.0.0.1 - - [01/Feb/2025 09:27:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:29,171 127.0.0.1 - - [01/Feb/2025 09:27:29] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:29,279 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/two_factor","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/two_factor","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-02-01 09:27:29,283 127.0.0.1 - - [01/Feb/2025 09:27:29] "POST /csp_report HTTP/1.1" 200 -
+2025-02-01 09:27:44,753 127.0.0.1 - - [01/Feb/2025 09:27:44] "[32mPOST /two_factor HTTP/1.1[0m" 302 -
+2025-02-01 09:27:45,171 127.0.0.1 - - [01/Feb/2025 09:27:45] "GET /dashboard HTTP/1.1" 200 -
+2025-02-01 09:27:45,456 127.0.0.1 - - [01/Feb/2025 09:27:45] "[36mGET /static/js/prism-python.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:45,458 127.0.0.1 - - [01/Feb/2025 09:27:45] "[36mGET /static/css/prism-okaidia.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:27:45,460 127.0.0.1 - - [01/Feb/2025 09:27:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-02-01 09:27:45,461 127.0.0.1 - - [01/Feb/2025 09:27:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:45,467 127.0.0.1 - - [01/Feb/2025 09:27:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-01 09:27:45,467 127.0.0.1 - - [01/Feb/2025 09:27:45] "[36mGET /static/js/prism-javascript.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:45,467 127.0.0.1 - - [01/Feb/2025 09:27:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:45,469 127.0.0.1 - - [01/Feb/2025 09:27:45] "[36mGET /static/js/prism.min.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:45,490 127.0.0.1 - - [01/Feb/2025 09:27:45] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:46,113 127.0.0.1 - - [01/Feb/2025 09:27:46] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-02-01 09:27:46,390 {"csp-report":{"document-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/dashboard","referrer":"https://bwqwvc9t-5000.asse.devtunnels.ms/two_factor","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"base-uri 'self' https://github.dev; default-src 'self' https://github.dev;style-src 'self' https://github.dev; script-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; object-src 'self'; child-src 'self'; connect-src 'self'; worker-src 'self'; report-uri /csp_report; frame-ancestors 'none'; form-action 'self'; frame-src 'none';","disposition":"enforce","blocked-uri":"https://bwqwvc9t-5000.asse.devtunnels.ms/static/manifest.json","status-code":200,"script-sample":""}}
+2025-02-01 09:27:46,390 127.0.0.1 - - [01/Feb/2025 09:27:46] "POST /csp_report HTTP/1.1" 200 -
