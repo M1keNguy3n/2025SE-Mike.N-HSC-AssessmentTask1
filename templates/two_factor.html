@@ -1,0 +1,24 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container d-flex align-items-center justify-content-center vh-100">
+  <div class="two-factor-box">
+    <form
+      class="border p-3 rounded shadow w-100"
+      method="POST"
+      action="{{ url_for('two_factor') }}"
+    >
+      {{ form.hidden_tag() }}
+      <h2 class="text-center">Two-Factor Authentication</h2>
+      <div class="form-group d-flex flex-column align-items-center">
+        {{ form.token.label(class="form-label") }} {{
+        form.token(class="form-control w-75") }} {% if form.token.errors %} {%
+        for error in form.token.errors %}
+        <div class="alert alert-danger mt-3">{{ error }}</div>
+        {% endfor %} {% endif %}
+      </div>
+      <div class="d-flex justify-content-center">
+        {{ form.submit(class="btn btn-primary mt-3") }}
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

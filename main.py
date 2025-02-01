@@ -1,17 +1,16 @@
-from flask import Flask, redirect, render_template, request, jsonify, flash, url_for
-from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
-import requests
+from flask import Flask, render_template, request, redirect, url_for, flash, session
+from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, TextAreaField, DateTimeField, URLField, SelectField
-from wtforms.validators import DataRequired, Email, Length, URL
+
 import os
 from flask_wtf import CSRFProtect
 import logging
 import userManagement as dbHandler
 from userManagement import User
 from flask_cors import CORS
-
+import qrcode
+import pyotp
+from forms import LoginForm, RegistrationForm, TwoFactorForm, Setup2FAForm, DiaryEntryForm
 # Code snippet for logging a message
 # app.logger.critical("message")
 
@@ -60,24 +59,17 @@ users = {}
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-class LoginForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Email(message='Please enter a valid email address')])
-    password = PasswordField('Password', validators=[DataRequired(), Length(min=8, max=20, message='Password must be between 8 and 20 characters')])
-    submit = SubmitField('Sign In')
-
 
 @login_manager.user_loader
 def load_user(user_id):
-    return dbHandler.get_user_by_id(user_id)
+    user = dbHandler.get_user_by_id(user_id)
+    if user:
+        return User(user.id, user.email, user.password, user.otp_secret)
+    return None
 
 
 #register implementation
 #Create a registration form using Flask-WTF
-class RegistrationForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Email(message='Please enter a valid email address')])
-    password = PasswordField('Password', validators=[DataRequired(), Length(min = 8, max = 20, message='Password must be between 8 and 20 characters')])
-    confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), Length(min = 8, max = 20, message='Password must be between 8 and 20 characters')])
-    submit = SubmitField('Register')
 
 @app.route("/", methods=["GET"])
 @app.route('/login', methods=['GET', 'POST'])
@@ -89,12 +81,60 @@ def login():
         # Check if user exists and password is correct
         user = dbHandler.get_users(email)
         if user and check_password_hash(user.password, password):
-            login_user(user)
-            return redirect(url_for('dashboard'))
+            session['pre_2fa_user_id'] = user.id
+            return redirect(url_for('two_factor'))
         else:
         # Flash message if login fails
             flash('Invalid email or password', 'danger')
     return render_template('login.html', form=form)
+
+
+@app.route('/two_factor', methods=['GET', 'POST'])
+def two_factor():
+    form = TwoFactorForm()
+    if 'pre_2fa_user_id' not in session:
+        return redirect(url_for('login'))
+    user_id = session['pre_2fa_user_id']
+    user = dbHandler.get_user_by_id(user_id)
+    
+    if form.validate_on_submit():
+        token = form.token.data
+        if user.verify_totp(token):
+            login_user(user)
+            session.pop('pre_2fa_user_id', None)
+            return redirect(url_for('dashboard'))
+        else:
+            flash('Invalid 2FA token. Please try again.', 'danger')
+    return render_template('two_factor.html', form=form)
+
+    
+@app.route('/setup_2fa', methods=['GET', 'POST'])
+def setup_2fa():
+    if 'pre_2fa_user_id' not in session:
+        return redirect(url_for('login'))
+    user_id = session['pre_2fa_user_id']
+    user = dbHandler.get_user_by_id(user_id)
+    if not user.otp_secret:
+        user.otp_secret = pyotp.random_base32()
+        dbHandler.update_user_otp_secret(user_id, user.otp_secret)
+    uri = user.get_totp_uri()
+    img = qrcode.make(uri)
+    
+    # Ensure the static/qrcodes directory exists
+    qr_code_dir = os.path.join(app.static_folder, 'qrcodes')
+    if not os.path.exists(qr_code_dir):
+        os.makedirs(qr_code_dir)
+    
+    # Save the QR code image
+    img_path = os.path.join(qr_code_dir, f'{user_id}.png')
+    img.save(img_path)
+    
+    form = Setup2FAForm()
+    if form.validate_on_submit():
+        flash('2FA setup complete. You can now log in.', 'success')
+        return redirect(url_for('login'))
+    
+    return render_template('setup_2fa.html', user_id=user_id, form=form)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -103,9 +143,11 @@ def register():
         email = form.email.data
         password = form.password.data
         confirm_password = form.confirm_password.data
+        otp_secret = pyotp.random_base32()
 
         # Check if the user already exists
-        if email in users:
+        existing_user = dbHandler.get_users(email)
+        if existing_user:
             flash('Email already registered. Please log in.', 'danger')
             return redirect(url_for('login'))
             
@@ -114,50 +156,19 @@ def register():
             flash('Passwords do not match. Please try again.', 'danger')
             return redirect(url_for('register'))
 
-        # Create a new user and store it in memory (for demonstration)
-        user = User(email, generate_password_hash(password))
-        dbHandler.insert_users(user.id, user.password)
-        flash('Registration successful! You can now log in.', 'success')
+        hashed_password = generate_password_hash(password)
+        # Insert the user into the database
+        dbHandler.insert_users(email, hashed_password, otp_secret)
+        flash('Registration successful! Please setup 2FA.', 'success')
+        session['pre_2fa_user_id'] = dbHandler.get_users(email).id
         
-        # Redirect to the login page after successful registration
-        return redirect(url_for('login'))
+        # Redirect to 2FA setup
+        return redirect(url_for('setup_2fa'))
     
     return render_template('register.html', form=form)
 
 
 #diary entry implementation
-class DiaryEntryForm(FlaskForm):
-    developer = StringField('Developer', validators=[DataRequired(), Length(min=2, max=50, message='Developer name must be between 2 and 50 characters')])
-    project = StringField('Project', validators=[DataRequired(), Length(min=2, max=100, message='Project name must be between 2 and 100 characters')])
-    start_time = DateTimeField(
-        'Start Time', 
-        validators=[DataRequired(message='Please enter a valid date and time.')],
-        format='%Y-%m-%d %H:%M:%S',
-        render_kw={"placeholder": "YYYY-MM-DD HH:MM:SS"},
-    )
-    end_time = DateTimeField(
-        'End Time', 
-        validators=[DataRequired(message='Please enter a valid date and time.')],
-        format='%Y-%m-%d %H:%M:%S',
-        render_kw={"placeholder": "YYYY-MM-DD HH:MM:SS"},
-    )
-    repo_url = URLField(
-        'Repository URL',
-        validators=[DataRequired(), URL(message='Please enter a valid URL')])
-    dev_note = TextAreaField(
-        'Developer Note',
-        validators=[DataRequired(), Length(max=2000, message='Developer note must be less than 2000 characters')]
-    )
-    code_snippet = TextAreaField(
-        'Code Snippet',
-        validators=[DataRequired(), Length(max=2000, message='Code snippet must be less than 2000 characters')]
-    )
-    language = SelectField(
-        'Language',
-        choices=[('python', 'Python'), ('javascript', 'JavaScript'), ('html', 'HTML')],
-        validators=[DataRequired()]
-    )
-    submit = SubmitField('Submit')
 
 @app.route('/new_entry', methods=['GET', 'POST'])
 @login_required
