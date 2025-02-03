@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
-
+from datetime import datetime, timedelta, timezone
+from secrets import token_hex
 import os
 from flask_wtf import CSRFProtect
 import logging
@@ -10,7 +11,7 @@ from userManagement import User
 from flask_cors import CORS
 import qrcode
 import pyotp
-from forms import LoginForm, RegistrationForm, TwoFactorForm, Setup2FAForm, DiaryEntryForm
+from forms import LoginForm, RegistrationForm, TwoFactorForm, Setup2FAForm, DiaryEntryForm, CSRFProtectionForm
 # Code snippet for logging a message
 # app.logger.critical("message")
 
@@ -64,7 +65,7 @@ login_manager.init_app(app)
 def load_user(user_id):
     user = dbHandler.get_user_by_id(user_id)
     if user:
-        return User(user.id, user.email, user.password, user.otp_secret)
+        return User(user.id, user.email, user.password, user.otp_secret, user.api_key, user.api_key_expiration)
     return None
 
 
@@ -79,7 +80,7 @@ def login():
         email = form.email.data
         password = form.password.data
         # Check if user exists and password is correct
-        user = dbHandler.get_users(email)
+        user = dbHandler.get_user_by_email(email)
         if user and check_password_hash(user.password, password):
             session['pre_2fa_user_id'] = user.id
             return redirect(url_for('two_factor'))
@@ -143,10 +144,9 @@ def register():
         email = form.email.data
         password = form.password.data
         confirm_password = form.confirm_password.data
-        otp_secret = pyotp.random_base32()
 
         # Check if the user already exists
-        existing_user = dbHandler.get_users(email)
+        existing_user = dbHandler.get_user_by_email(email)
         if existing_user:
             flash('Email already registered. Please log in.', 'danger')
             return redirect(url_for('login'))
@@ -156,17 +156,17 @@ def register():
             flash('Passwords do not match. Please try again.', 'danger')
             return redirect(url_for('register'))
 
+        otp_secret = pyotp.random_base32()
         hashed_password = generate_password_hash(password)
+        api_key = token_hex(16)
+        api_key_expiration = datetime.now(timezone.utc) + timedelta(days=7)
+        api_key_expiration = api_key_expiration.replace(tzinfo = None)
         # Insert the user into the database
-        dbHandler.insert_users(email, hashed_password, otp_secret)
-        flash('Registration successful! Please setup 2FA.', 'success')
-        session['pre_2fa_user_id'] = dbHandler.get_users(email).id
-        
-        # Redirect to 2FA setup
+        dbHandler.insert_user(email, hashed_password, otp_secret, api_key, api_key_expiration)
+        flash('Registration successful! Please set up 2FA.', 'success')
+        session['pre_2fa_user_id'] = dbHandler.get_user_by_email(email).id
         return redirect(url_for('setup_2fa'))
-    
     return render_template('register.html', form=form)
-
 
 #diary entry implementation
 
@@ -188,6 +188,27 @@ def new_entry():
         flash('Diary entry submitted successfully!', 'success')
         return redirect(url_for('dashboard'))
     return render_template('new_entry.html', form=form)
+
+@app.route('/view_api_key', methods=['GET'])
+@login_required
+def view_api_key():
+    user = current_user
+    form = CSRFProtectionForm()
+    utctime = datetime.now(timezone.utc).replace(tzinfo=None)
+    if datetime.strptime(user.api_key_expiration, "%Y-%m-%d %H:%M:%S.%f") < utctime:
+        flash('Your API key has expired. Please refresh it.', 'danger')
+    return render_template('view_api_key.html', api_key=user.api_key, api_key_expiration=datetime.strptime(user.api_key_expiration, "%Y-%m-%d %H:%M:%S.%f"), form=form)
+
+@app.route('/refresh_api_key', methods=['POST'])
+@login_required
+def refresh_api_key():
+    user = current_user
+    new_api_key = token_hex(16)
+    new_api_key_expiration = datetime.now(timezone.utc) + timedelta(days=30)
+    new_api_key_expiration = new_api_key_expiration.replace(tzinfo=None)
+    dbHandler.update_user_api_key(user.id, new_api_key, new_api_key_expiration)
+    flash('New API key issued.', 'success')
+    return redirect(url_for('view_api_key'))
 
 # Redirect index.html to domain root for consistent UX
 @app.route("/index", methods=["GET"])

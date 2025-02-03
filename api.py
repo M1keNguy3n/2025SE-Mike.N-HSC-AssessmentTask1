@@ -47,11 +47,6 @@ def add_entry():
     api_key_error = check_api_key()
     if api_key_error:
         return api_key_error
-    credentials_error = check_credentials()
-
-    if credentials_error:
-        return credentials_error
-    
     data = request.get_json()
     response = dbHandler.insert_diaries_api(data)
     return response

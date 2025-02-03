@@ -1,0 +1,29 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container mt-5">
+  <h2 class="text-center">Your API Key</h2>
+  <p class="text-center">Use this API key to access the API:</p>
+  <div class="d-flex justify-content-center">
+    <code id="api-key">{{ api_key }}</code>
+  </div>
+  <p class="text-center mt-3">
+    Expiration Date:
+    <span id="api-key-expiration">{{ api_key_expiration }}</span>
+  </p>
+  <div class="d-flex justify-content-center mt-3">
+    <form
+      id="refresh-api-key-form"
+      method="POST"
+      action="{{ url_for('refresh_api_key') }}"
+    >
+      {{ form.hidden_tag() }}
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary">
+          Generate New API Key
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %} {% block scripts %}
+<script src="{{ url_for('static', filename='js/refresh_api_key.js') }}"></script>
+{% endblock %}

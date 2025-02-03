@@ -56,3 +56,6 @@ class DiaryEntryForm(FlaskForm):
         validators=[DataRequired()]
     )
     submit = SubmitField('Submit')
+
+class CSRFProtectionForm(FlaskForm):
+    pass

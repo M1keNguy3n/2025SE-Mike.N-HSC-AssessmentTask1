@@ -55,3 +55,7 @@ body {
   font-size: 0.875rem;
   padding: 0.5rem 1rem;
 }
+
+.highlight {
+  background-color: yellow;
+}

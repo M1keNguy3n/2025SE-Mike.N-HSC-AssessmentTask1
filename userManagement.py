@@ -5,11 +5,13 @@ from flask import current_app
 import pyotp
 
 class User(UserMixin):
-    def __init__(self, id, email, password, otp_secret):
+    def __init__(self, id, email, password, otp_secret, api_key, api_key_expiration):
         self.id = id
         self.email = email
         self.password = password
-        self.otp_secret = otp_secret or pyotp.random_base32()
+        self.otp_secret = otp_secret
+        self.api_key = api_key
+        self.api_key_expiration = api_key_expiration
 
     def get_totp_uri(self):
         return f"otpauth://totp/Diary:{self.id}?secret={self.otp_secret}&issuer=Diary"
@@ -53,31 +55,37 @@ def insert_diaries(developer,
     con.commit()
     con.close()
 
-def insert_users(email, password, otp_secret):
+def insert_user(email, password, otp_secret, api_key, api_key_expiration):
     con = sql.connect(".databaseFiles/database.db")
     cur = con.cursor()
-    cur.execute("INSERT INTO users (email, password, otp_secret) VALUES (?, ?, ?)", (email, password, otp_secret))
+    cur.execute("INSERT INTO users (email, password, otp_secret, api_key, api_key_expiration) VALUES (?, ?, ?, ?, ?)", (email, password, otp_secret, api_key, api_key_expiration))
     con.commit()
     con.close()
-    
 
-def get_users(email):
+def get_user_by_email(email):
     con = sql.connect(".databaseFiles/database.db")
     cur = con.cursor()
-    user = cur.execute("SELECT id, email, password, otp_secret FROM users WHERE email = ?", (email,)).fetchone()
+    user = cur.execute("SELECT id, email, password, otp_secret, api_key, api_key_expiration FROM users WHERE email = ?", (email,)).fetchone()
     con.close()
     if user:
-        return User(user[0], user[1], user[2], user[3])
+        return User(user[0], user[1], user[2], user[3], user[4], user[5])
     return None
 
 def get_user_by_id(user_id):
-    con = sql.connect(".databaseFiles/database.db")
+    con = sql.connect(".databaseFiles/database.db")   
     cur = con.cursor()
-    user = cur.execute("SELECT id, email, password, otp_secret FROM users WHERE id = ?", (user_id,)).fetchone()
+    user = cur.execute("SELECT id, email, password, otp_secret, api_key, api_key_expiration FROM users WHERE id = ?", (user_id,)).fetchone()
     con.close()
     if user:
-        return User(user[0], user[1], user[2], user[3])
+        return User(user[0], user[1], user[2], user[3], user[4], user[5])
     return None
+
+def update_user_api_key(user_id, api_key, api_key_expiration):
+    con = sql.connect(".databaseFiles/database.db")
+    cur = con.cursor()
+    cur.execute("UPDATE users SET api_key = ?, api_key_expiration = ? WHERE id = ?", (api_key, api_key_expiration, user_id))
+    con.commit()
+    con.close()
 
 def update_user_otp_secret(user_id, otp_secret):
     con = sql.connect(".databaseFiles/database.db")
