@@ -1,13 +1,16 @@
 const assets = [
   "/",
   "static/css/style.css",
-  "static/css/style.css/bootstrap.min.css",
+  "static/css/bootstrap.min.css",
+  "static/css/prism.css",
   "static/css/prism-okaidia.min.css",
   "static/js/bootstrap.bundle.min.js",
   "static/js/prism.min.js",
   "static/js/prism-javascript.min.js",
   "static/js/prism-python.min.js",
   "static/js/app.js",
+  "static/js/prism.js",
+  "static/js/textarea_tabs.js",
   "static/images/logo.png",
   "static/images/favicon.jpg",
   "static/icons/icon-128x128.png",
@@ -63,49 +66,3 @@ self.addEventListener("fetch", (evt) => {
     })
   );
 });
-
-document.getElementById("diaryEntryForm").addEventListener(
-  "submit",
-  function (event) {
-    var form = this;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-      // Find the first invalid element
-      var firstInvalidElement = form.querySelector(":invalid");
-      if (firstInvalidElement) {
-        // Scroll to the first invalid element
-        firstInvalidElement.focus();
-        firstInvalidElement.scrollIntoView({
-          behavior: "smooth",
-          block: "center",
-        });
-      }
-    }
-    form.classList.add("was-validated");
-  },
-  false
-);
-
-document.getElementById("diaryEntryForm").addEventListener(
-  "submit",
-  function (event) {
-    var form = this;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-      // Find the first invalid element
-      var firstInvalidElement = form.querySelector(":invalid");
-      if (firstInvalidElement) {
-        // Scroll to the first invalid element
-        firstInvalidElement.focus();
-        firstInvalidElement.scrollIntoView({
-          behavior: "smooth",
-          block: "center",
-        });
-      }
-    }
-    form.classList.add("was-validated");
-  },
-  false
-);

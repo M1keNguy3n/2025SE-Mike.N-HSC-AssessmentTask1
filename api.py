@@ -5,11 +5,13 @@ from flask_limiter.util import get_remote_address
 import userManagement as dbHandler
 from werkzeug.security import check_password_hash
 import base64
+from flask_login import current_user, LoginManager
+from userManagement import User
 
 api = Flask(__name__)
 cors = CORS(api)
 api.config["CORS_HEADERS"] = "Content-Type"
-api_key = "Z6AxW9oTk9fXB8Kp"
+
 limiter = Limiter(
     get_remote_address,
     app=api,
@@ -18,10 +20,11 @@ limiter = Limiter(
 )
 
 def check_api_key():
-    auth_key = request.headers.get("Authorization")
-    if auth_key and auth_key.startswith("Bearer "):
-        auth_key = auth_key.split(" ")[1]
-        if auth_key == api_key:
+    auth_header = request.headers.get("Authorization")
+    if auth_header and auth_header.startswith("Bearer "):
+        api_key = auth_header.split(" ")[1]
+        user = dbHandler.get_user_by_api_key(api_key)
+        if user and user.api_key == api_key:
             return None
     return jsonify({"error": "Invalid API key"}), 401
 
@@ -35,9 +38,18 @@ def get_entry():
     
     column_name = request.args.get('column_name')
     value = request.args.get('value')
-    if not column_name or not value:
-        return jsonify({"error": "Missing column_name or value parameter"}), 400
-    data = dbHandler.get_diaries_by_column(column_name, value)
+    allowed_columns = ['developer', 'project', 'start_time', 'end_time', 'repo_url', 'dev_note', 'code_snippet', 'language']
+    
+    if column_name != None:
+        if column_name not in allowed_columns:
+            raise ValueError(f"Invalid column name: {column_name}")
+    
+    
+    if column_name and value:
+        data = dbHandler.get_diaries_by_column(column_name, value)
+    else:
+        data = dbHandler.list_diaries()
+
     return jsonify(data), 200
 
 
@@ -49,7 +61,7 @@ def add_entry():
         return api_key_error
     data = request.get_json()
     response = dbHandler.insert_diaries_api(data)
-    return response
+    return response, 201
 
 
 if __name__ == "__main__":

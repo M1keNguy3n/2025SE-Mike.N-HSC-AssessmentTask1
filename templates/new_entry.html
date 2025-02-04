@@ -61,8 +61,9 @@
 
     <div class="mb-3">
       {{ form.code_snippet.label(class="form-label") }} {{
-      form.code_snippet(class="form-control", rows=5, required=True) }} {% if
-      form.code_snippet.errors %} {% for error in form.code_snippet.errors %}
+      form.code_snippet(class="form-control", rows=5, required=True,
+      id="code_snippet") }} {% if form.code_snippet.errors %} {% for error in
+      form.code_snippet.errors %}
       <div class="alert alert-danger mt-3">{{ error }}</div>
       {% endfor %} {% endif %}
     </div>
@@ -80,5 +81,4 @@
     </div>
   </form>
 </div>
-
 {% endblock %}

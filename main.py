@@ -12,6 +12,7 @@ from flask_cors import CORS
 import qrcode
 import pyotp
 from forms import LoginForm, RegistrationForm, TwoFactorForm, Setup2FAForm, DiaryEntryForm, CSRFProtectionForm
+import requests
 # Code snippet for logging a message
 # app.logger.critical("message")
 
@@ -52,6 +53,7 @@ def apply_csp(response):
         "frame-ancestors 'none'; "
         "form-action 'self'; "
         "frame-src 'none';"
+        "manifest-src 'self' https://github.dev;"
         )
     return response
 
@@ -175,17 +177,23 @@ def register():
 def new_entry():
     form = DiaryEntryForm()
     if request.method == "POST" and form.validate_on_submit():
-        developer = form.developer.data
-        project = form.project.data
-        start_time = form.start_time.data.strftime('%Y-%m-%d %H:%M:%S')
-        end_time = form.end_time.data.strftime('%Y-%m-%d %H:%M:%S')
-        repo_url = form.repo_url.data
-        dev_note = form.dev_note.data
-        code_snippet = form.code_snippet.data
-        language = form.language.data
-        dbHandler.insert_diaries(developer, project, start_time, end_time, repo_url, dev_note, code_snippet, language)
-        
-        flash('Diary entry submitted successfully!', 'success')
+        data = {
+            'developer': form.developer.data,
+            'project': form.project.data,
+            'start_time': form.start_time.data.strftime('%Y-%m-%d %H:%M:%S'),
+            'end_time': form.end_time.data.strftime('%Y-%m-%d %H:%M:%S'),
+            'repo_url': form.repo_url.data,
+            'dev_note': form.dev_note.data,
+            'code_snippet': form.code_snippet.data,
+            'language': form.language.data
+        }
+        api_key = current_user.api_key
+        headers = {'Authorization': f'Bearer {api_key}', 'Content-Type': 'application/json'}
+        response = requests.post('http://localhost:3000/add_entry', json=data, headers=headers)
+        if response.status_code == 201:
+            flash('Diary entry submitted successfully!', 'success')
+        else:
+            flash('Failed to submit diary entry to the API.', 'danger')
         return redirect(url_for('dashboard'))
     return render_template('new_entry.html', form=form)
 
@@ -219,15 +227,18 @@ def refresh_api_key():
 def root():
     return redirect("/", 302)
 
-@app.route("/index", methods=['GET'])
-
-def index():
-    return render_template("/index.html", content= dbHandler.list_diaries())
-
 @app.route("/dashboard", methods=['GET'])
 @login_required
 def dashboard():
-    return render_template("/dashboard.html", content= dbHandler.list_diaries())
+    api_key = current_user.api_key
+    headers = {'Authorization': f'Bearer {api_key}'}
+    response = requests.get('http://127.0.0.1:3000/get_entry', headers=headers)
+    if response.status_code == 200:
+        entries = response.json()
+    else:
+        entries = []
+        flash('Failed to retrieve entries from the API.', 'danger')
+    return render_template('dashboard.html', content=entries)
 
 @app.route("/privacy.html", methods=["GET"])
 def privacy():

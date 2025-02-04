@@ -22,11 +22,11 @@ class User(UserMixin):
     
 
 def list_diaries():
-	con = sql.connect(".databaseFiles/database.db")
-	cur = con.cursor()
-	data = cur.execute('SELECT * FROM diaries').fetchall()
-	con.close()
-	return data
+    con = sql.connect(".databaseFiles/database.db")
+    cur = con.cursor()
+    data = cur.execute('SELECT * FROM diaries').fetchall()
+    con.close()
+    return data
 
 def get_diaries_by_column(column_name, value):
     con = sql.connect(".databaseFiles/database.db")
@@ -75,6 +75,15 @@ def get_user_by_id(user_id):
     con = sql.connect(".databaseFiles/database.db")   
     cur = con.cursor()
     user = cur.execute("SELECT id, email, password, otp_secret, api_key, api_key_expiration FROM users WHERE id = ?", (user_id,)).fetchone()
+    con.close()
+    if user:
+        return User(user[0], user[1], user[2], user[3], user[4], user[5])
+    return None
+
+def get_user_by_api_key(api_key):
+    con = sql.connect(".databaseFiles/database.db")
+    cur = con.cursor()
+    user = cur.execute("SELECT id, email, password, otp_secret, api_key, api_key_expiration FROM users WHERE api_key = ?", (api_key,)).fetchone()
     con.close()
     if user:
         return User(user[0], user[1], user[2], user[3], user[4], user[5])

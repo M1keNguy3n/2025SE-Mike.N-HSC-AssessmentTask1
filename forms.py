@@ -52,7 +52,7 @@ class DiaryEntryForm(FlaskForm):
     )
     language = SelectField(
         'Language',
-        choices=[('python', 'Python'), ('javascript', 'JavaScript'), ('html', 'HTML')],
+        choices=[('PYTHON', 'Python'), ('JAVASCRIPT', 'JavaScript'), ('HTML', 'HTML'), ('CSS', 'CSS'), ('SQL', 'SQL'), ('CPP', 'C++'), ('BASH', 'Bash')],
         validators=[DataRequired()]
     )
     submit = SubmitField('Submit')
