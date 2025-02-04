@@ -254,7 +254,4 @@ def csp_report():
 
 
 if __name__ == "__main__":
-    app.config['DEBUG'] = True
-    app.config['FLASK_DEBUG'] = 1
-    logging.getLogger('werkzeug').setLevel(logging.DEBUG)
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(debug=False, host="0.0.0.0", port=5000)

@@ -65,4 +65,4 @@ def add_entry():
 
 
 if __name__ == "__main__":
-    api.run(debug=True, host="0.0.0.0", port=3000)
+    api.run(debug=False, host="0.0.0.0", port=3000)
