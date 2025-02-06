@@ -1,11 +1,158 @@
-{% extends 'layout.html' %}
-{% block content %}
-<div class="container">
-    <div class="row">
-        <h1 class="display-1">Privacy Policy</h1>
+{% extends 'layout.html' %} {% block content %}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <h1 class="display-4 text-center">Privacy Policy</h1>
     </div>
-    <div class="row">
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <p class="lead">
+        Welcome to our Privacy Policy page! When you use our web services, you
+        trust us with your information. This Privacy Policy is meant to help you
+        understand what data we collect, why we collect it, and what we do with
+        it.
+      </p>
 
+      <h2 class="mt-4">Information We Collect</h2>
+      <p>
+        We collect information to provide better services to all our users. We
+        collect information in the following ways:
+      </p>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Information you give us.</strong> For example, our services
+          require you to sign up for an account or submit a diary entry. When
+          you do, we’ll ask for personal information, like your name, email
+          address, project name, repository URL and code snippets.
+        </li>
+        <li class="list-group-item">
+          <div class="d-flex align-items-center">
+            <strong>Information we get from your use of our services. </strong
+            ><button
+              class="btn btn-link p-0 ms-2"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExample1"
+              aria-expanded="false"
+              aria-controls="collapseExample1"
+            >
+              This information includes:
+            </button>
+          </div>
+          <div class="collapse" id="collapseExample1">
+            <ul class="list-group mt-2">
+              <li class="list-group-item">
+                Device information (not stored on the server)
+              </li>
+              <li class="list-group-item">Log information</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <h2 class="mt-4">How We Use Information We Collect</h2>
+      <p>
+        We use the information we collect from all of our services to provide,
+        maintain, protect and improve them, to develop new ones, and to protect
+        our users.
+      </p>
+
+      <h2 class="mt-4">Information We Share</h2>
+      <p>
+        We <strong>do</strong> share your diary entries with developers of the
+        team who have access to the website.
+      </p>
+      <p>
+        We <strong>do not</strong> share personal information with companies,
+        organizations and individuals outside of our organization unless one of
+        the following circumstances applies:
+      </p>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>With your consent.</strong> We will share personal information
+          with companies, organizations or individuals outside of our
+          organization when we have your consent to do so.
+        </li>
+        <li class="list-group-item">
+          <strong>For legal reasons.</strong> We will share personal information
+          with companies, organizations or individuals outside of our
+          organization if we have a good-faith belief that access, use,
+          preservation or disclosure of the information is reasonably necessary,
+          <button
+            class="btn btn-link p-0 ms-1 mb-1"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample2"
+            aria-expanded="false"
+            aria-controls="collapseExample2"
+          >
+            to:
+          </button>
+
+          <div class="collapse" id="collapseExample2">
+            <ul class="list-group">
+              <li class="list-group-item">
+                Meet any applicable law, regulation, legal process or
+                enforceable governmental request.
+              </li>
+              <li class="list-group-item">
+                Detect, prevent, or otherwise address fraud, security or
+                technical issues.
+              </li>
+              <li class="list-group-item">
+                Protect against harm to the rights, property or safety of our
+                users or the public as required or permitted by law.
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <h2 class="mt-4">Information Security</h2>
+      <p>
+        We work hard to protect our users from unauthorized access to or
+        unauthorized alteration, disclosure or destruction of information we
+        hold.<button
+          class="btn btn-link p-0 ms-1 mb-1"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseExample3"
+          aria-expanded="false"
+          aria-controls="collapseExample3"
+        >
+          In particular:
+        </button>
+      </p>
+      <div class="collapse" id="collapseExample3">
+        <ul class="list-group">
+          <li class="list-group-item">We encrypt your passwords.</li>
+          <li class="list-group-item">
+            We offer you two-step verification when you access your account.
+          </li>
+          <li class="list-group-item">
+            We review our information collection, storage and processing
+            practices to guard against unauthorized access to systems.
+          </li>
+          <li class="list-group-item">
+            We restrict access to personal information to our employees,
+            contractors and agents who need to know that information in order to
+            process it for us, and who are subject to strict contractual
+            confidentiality obligations and may be disciplined or terminated if
+            they fail to meet these obligations.
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="mt-4">Changes</h2>
+      <p>
+        Our Privacy Policy may change from time to time. We will not reduce your
+        rights under this Privacy Policy without your explicit consent. We will
+        post any privacy policy changes on this page and, if the changes are
+        significant, we will provide a more prominent notice (including, for
+        certain services, email notification of privacy policy changes).
+      </p>
     </div>
+  </div>
 </div>
 {% endblock %}

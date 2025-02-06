@@ -59,3 +59,11 @@ body {
 .highlight {
   background-color: yellow;
 }
+
+.collapseExample {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+  display: inline;
+  vertical-align: baseline;
+}

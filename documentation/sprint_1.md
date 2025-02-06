@@ -8,8 +8,8 @@
 
 ## Increment (what must be achieved by the end of the sprint)
 
-1. Functioning home page, login page\
-2. Dashboard that can show entries\
+1. Functioning home page, login page
+2. Dashboard that can show entries
 3. Database that handle entries and accounts
 
 ## Sprint Review

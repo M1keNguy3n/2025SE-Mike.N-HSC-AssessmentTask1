@@ -9,6 +9,7 @@
           <p class="card-text">Project: {{ row[2] }}</p>
           <p class="card-text">Start Time: {{ row[3] }}</p>
           <p class="card-text">End Time: {{ row[4] }}</p>
+          <p class="card-text">Time Worked: {{ row[8] }}</p>
           <p class="card-text">
             <button
               class="btn btn-primary"
@@ -20,6 +21,11 @@
             >
               Read more
             </button>
+            <form action="{{ url_for('delete_entry', entry_id=row[0]) }}" method="POST" style="display:inline;">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+              <input type="hidden" name="_method" value="DELETE">
+              <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
           </p>
         </div>
       </div>
