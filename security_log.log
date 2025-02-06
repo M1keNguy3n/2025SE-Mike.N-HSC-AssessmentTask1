@@ -16367,3 +16367,31 @@
 2025-02-06 20:59:15,569  * Detected change in 'D:\\Github\\2025SE-Mike.N-HSC-AssessmentTask1\\main.py', reloading
 2025-02-06 20:59:15,570  * Detected change in 'D:\\Github\\2025SE-Mike.N-HSC-AssessmentTask1\\main.py', reloading
 2025-02-06 20:59:16,760  * Restarting with watchdog (windowsapi)
+2025-02-06 21:33:25,624 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.239:5000
+2025-02-06 21:33:25,624 [33mPress CTRL+C to quit[0m
+2025-02-06 21:33:25,637  * Restarting with watchdog (windowsapi)
+2025-02-06 21:33:26,862  * Debugger is active!
+2025-02-06 21:33:26,867  * Debugger PIN: 843-491-234
+2025-02-06 21:34:18,680  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\_pytest\\cacheprovider.py', reloading
+2025-02-06 21:34:18,765  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\_pytest\\fixtures.py', reloading
+2025-02-06 21:34:18,839  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\_pytest\\config\\__init__.py', reloading
+2025-02-06 21:34:18,917  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\_pytest\\capture.py', reloading
+2025-02-06 21:34:19,018  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\_pytest\\doctest.py', reloading
+2025-02-06 21:34:19,051  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\_pytest\\compat.py', reloading
+2025-02-06 21:34:19,077  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\_pytest\\junitxml.py', reloading
+2025-02-06 21:34:19,101  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\_pytest\\legacypath.py', reloading
+2025-02-06 21:34:19,165  * Detected change in 'C:\\Users\\Lenovo\\anaconda3\\Lib\\site-packages\\_pytest\\logging.py', reloading
+2025-02-06 21:34:20,330  * Restarting with watchdog (windowsapi)
+2025-02-06 21:34:22,029  * Debugger is active!
+2025-02-06 21:34:22,038  * Debugger PIN: 843-491-234
+2025-02-06 21:34:42,964  * Detected change in 'D:\\Github\\2025SE-Mike.N-HSC-AssessmentTask1\\userManagement.py', reloading
+2025-02-06 21:34:42,970  * Detected change in 'D:\\Github\\2025SE-Mike.N-HSC-AssessmentTask1\\userManagement.py', reloading
+2025-02-06 21:34:44,242  * Restarting with watchdog (windowsapi)
+2025-02-06 21:34:45,880  * Debugger is active!
+2025-02-06 21:34:45,885  * Debugger PIN: 843-491-234
+2025-02-06 21:35:27,873  * Detected change in 'D:\\Github\\2025SE-Mike.N-HSC-AssessmentTask1\\userManagement.py', reloading
+2025-02-06 21:35:27,874  * Detected change in 'D:\\Github\\2025SE-Mike.N-HSC-AssessmentTask1\\userManagement.py', reloading
+2025-02-06 21:35:29,092  * Restarting with watchdog (windowsapi)

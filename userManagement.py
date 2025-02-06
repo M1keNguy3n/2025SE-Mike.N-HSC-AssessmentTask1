@@ -2,6 +2,7 @@ import sqlite3 as sql
 from flask_login import UserMixin
 from jsonschema import validate
 import pyotp
+from datetime import datetime
 
 class User(UserMixin):
     def __init__(self, id, email, password, otp_secret, api_key, api_key_expiration):
@@ -83,20 +84,31 @@ def update_user_otp_secret(user_id, otp_secret):
 
 def insert_diaries_api(data):
     print(data)
-    if validate_json(data):
-        con = sql.connect(".databaseFiles/database.db")
-        cur = con.cursor()
-        cur.execute('''
-                INSERT INTO diaries (Nzdvy_developer, hBbdT_project, uYCKJ_start_time, MbOId_end_time, Aiiyt_repo_url, LaH8Y_dev_note, qVKdx_code_snippet, xI1ka_language, FVtfU_owner)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-            ''', (data["developer"], data["project"], data["start_time"], data["end_time"], data["repo_url"], data["dev_note"], data["code_snippet"], data["language"], data["owner"]))
-        cur.execute("UPDATE diaries SET vTJWO_time_worked = ROUND((strftime('%s', MbOId_end_time) - strftime('%s', uYCKJ_start_time)) / 60.0 / 15);")
-        cur.execute("UPDATE diaries SET vTJWO_time_worked = printf('%d:%02d', (vTJWO_time_worked * 15) / 60, (vTJWO_time_worked * 15) % 60);")
-        con.commit()
-        con.close()
-        return {"message": "Diary entry added successfully"}, 201
-    else:
+    if not validate_json(data):
         return {"error": "Invalid JSON"}, 400
+    try:
+        start_time = datetime.strptime(data["start_time"], '%Y-%m-%d %H:%M:%S')
+        end_time = datetime.strptime(data["end_time"], '%Y-%m-%d %H:%M:%S')
+        if start_time >= datetime.now() or end_time >= datetime.now():
+            return {"error": "start_time and end_time must be less than the current date and time"}, 400
+    except ValueError:
+        return {"error": "Invalid date format. Use YYYY-MM-DD HH:MM:SS"}, 400
+    if start_time >= end_time:
+        return {"error": "start_time must be less than end_time"}, 400        
+    
+    con = sql.connect(".databaseFiles/database.db")
+    cur = con.cursor()
+    cur.execute('''
+        INSERT INTO diaries (Nzdvy_developer, hBbdT_project, uYCKJ_start_time, MbOId_end_time, Aiiyt_repo_url, LaH8Y_dev_note, qVKdx_code_snippet, xI1ka_language, FVtfU_owner)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (data["developer"], data["project"], data["start_time"], data["end_time"], data["repo_url"], data["dev_note"], data["code_snippet"], data["language"], data["owner"]))
+    cur.execute("UPDATE diaries SET vTJWO_time_worked = ROUND((strftime('%s', MbOId_end_time) - strftime('%s', uYCKJ_start_time)) / 60.0 / 15);")
+    cur.execute("UPDATE diaries SET vTJWO_time_worked = printf('%d:%02d', (vTJWO_time_worked * 15) / 60, (vTJWO_time_worked * 15) % 60);")
+    con.commit()
+    con.close()
+    return {"message": "Diary entry added successfully"}, 201
+
+        
 
 schema = {
     "type": "object",
