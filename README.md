@@ -16,7 +16,8 @@
    - username: minhkhuattuan.nguyen@gmail.com
    - password: mocnhicam
    - otp_secret: WXZ6P3IWV6XM54H6F3SNDYOEDP6JPEMP to enter manually
-   - QR code: ![image](https://github.com/user-attachments/assets/38ecfdb3-6223-4535-8d20-4c26040cd9f7)
+   - QR code:
+![image](https://github.com/user-attachments/assets/38ecfdb3-6223-4535-8d20-4c26040cd9f7)
 
 
 ## Making a new entry
