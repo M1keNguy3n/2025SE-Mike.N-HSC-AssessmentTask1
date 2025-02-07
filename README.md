@@ -36,7 +36,7 @@
    ![image](https://github.com/user-attachments/assets/655d3400-839b-448b-b7f9-4c6bc7e95dc6)
 3. Enter your data in as a json
 4. Schema:
-   '''javascript
+   ```json
    {
         "developer": {
             "type": "string",
@@ -75,4 +75,4 @@
             "enum": ["PYTHON", "CPP", "BASH", "SQL", "HTML", "CSS", "JAVASCRIPT"]
         }
    }
-   '''
+   ```
